@@ -6,60 +6,6 @@
     2014-2020</span><sup>2</sup></h3>
 
 
-  {foreach $stawki_jednostkowe as $rekord}
-  <table style="border-collapse:collapse;border-spacing:0;">
-    <tbody>
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;vertical-align: text-bottom; ">
-
-          {$rekord@iteration})
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;">
-          <p></p>
-        </td>
-      </tr>
-
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Nazwa stawki jednostkowej</p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>
-            {$rekord.nazwa_stawki}</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Kwota stawki jednostkowej</p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>
-            {Funkcje::formatLiczba({$rekord.stawka_wydatki_kwal})} PLN</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Dokumenty potwierdzające wykonanie stawki jednostkowej<sup>16</sup></p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  {/foreach}
-
-
   <div style="text-align: justify;"></div>
   <div style="text-align: justify;"><strong>Nr umowy: {$dane_z_projects.numer_umowy}<br /><br /></strong></div>
   <div style="text-align: justify;">Umowa o dofinansowanie projektu: <strong>{$dane_z_projects.tytul_proj}</strong> w
@@ -369,7 +315,7 @@
         <td style="vertical-align: text-top;margin-top: 4px;" width="8mm"><strong>{foreach $wskazniki_rez as
             $rekord}
             {$rekord@iteration})</strong></td>
-        <td width="160mm"><strong>{$rekord.nazwa_wsk_rez},wartość dolelowa:{foreach $wskazniki_rez as $rekord}
+        <td width="160mm"><strong>{$rekord.nazwa_wsk_rez},wartość docelowa:{foreach $wskazniki_rez as $rekord}
             {$rekord.wsk_rez_docelowa}</strong></td>
       </tr>
     </tbody>
@@ -522,43 +468,64 @@
     poniżej dokumentów potwierdzających wykonanie określonej stawki jednostkowej.</li>
 </ol>
 
-<div style="text-align: justify;">1)</div>
-<div style="text-align: justify;">
-  <table style="border-collapse:collapse;border-spacing:0;">
-    <tbody>
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Nazwa stawki jednostkowej</p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Kwota stawki jednostkowej</p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td width="264"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p>Dokumenty potwierdzające wykonanie stawki jednostkowej<sup>16</sup></p>
-        </td>
-        <td width="289"
-          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
-          <p></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+
+
+
+{foreach $stawki_jednostkowe as $rekord}
+<table style="border-collapse:collapse;border-spacing:0;margin-left:30px">
+  <tbody>
+    <tr>
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;vertical-align: text-bottom; margin-left: 0;">
+
+        {$rekord@iteration})
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;">
+        <p></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Nazwa stawki jednostkowej</p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>
+          {$rekord.nazwa_stawki}</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Kwota stawki jednostkowej</p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>
+          {Funkcje::formatLiczba({$rekord.stawka_wydatki_kwal})} PLN</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Dokumenty potwierdzające wykonanie stawki jednostkowej<sup>16</sup></p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{/foreach}
+
+
 <div style="text-align: justify;"></div>
 <div style="text-align: justify;">Ww. dokumenty mogą podlegać kontroli podczas weryfikacji wniosku o płatność oraz
   kontroli na miejscu.</div>
@@ -593,32 +560,17 @@
 
       {/if}
     </li>
+    <li>Projekt będzie realizowany w partnerstwie z: <sup>18</sup></li>
+  </ol>
 
+  <div style="margin-left: 30px">
+    <ol type="a">
+      <li><strong>{foreach $partnerzy as
+          $rekord}{$rekord.nazwa_partnera},</strong></li>
+    </ol>
+  </div>
 
-    </li>
-
-
-
-    <li>
-
-      {if $dane_z_aktualnego_wnd.realiz_w_partner=='1'}
-      <span>Projekt będzie realizowany w partnerstwie z:</span><sup>18</sup>
-      <ol type="a">
-        <li><strong> {foreach $partnerzy as $rekord} {$rekord.nazwa_partnera}{/foreach},</strong>
-        </li>
-      </ol>
-
-      {else}
-
-      <span style="text-decoration: line-through;">Projekt będzie realizowany w partnerstwie z:</span><sup>18</sup>
-
-      {/if}
-
-    </li>
-
-
-
-
+  <ol start="6">
     <li>Beneficjent oświadcza, iż porozumienie/umowa o partnerstwie spełnia minimalne wymogi formalne, o których
       mowa
       w art. 33 ust. 5 ustawy wdrożeniowej oraz partnerstwo zostało nawiązane zgodnie z art. 33 ustawy
