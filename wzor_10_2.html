@@ -134,12 +134,12 @@
       <li>12) „programie” oznacza to Regionalny Program Operacyjny Województwa Śląskiego na lata 2014-2020 uchwalony
         przez Zarząd Województwa Śląskiego i przyjęty przez Komisję Europejską;</li>
       <li>13) „projekcie” oznacza to projekt realizowany w ramach wniosku o dofinansowanie projektu nr
-        <strong>{$dane_z_projects.pelnyNrProjektu}</strong> wraz z późniejszymi zmianami, stanowiącym załącznik nr 1
+        <strong>{$dane_z_projects.aktualne_wnd}</strong> wraz z późniejszymi zmianami, stanowiącym załącznik nr 1
         do
         umowy;</li>
       <li>14) „przetwarzaniu danych osobowych”<sup>5</sup>
         wszelkie operacje lub zestaw operacji wykonywanych na danych osobowych lub zestawach danych osobowych;</li>
-      <li>15) „rachunku płatniczym transferowym” należy przez to rozumieć rachunek Beneficjenta,na który trafia kwota
+      <li>15) „rachunku płatniczym transferowym” należy przez to rozumieć rachunek Beneficjenta, na który trafia kwota
         dofinansowania projektu i z którego niezwłocznie jest przekazywana na wyodrębniony dla projektu rachunek danej
         jednostki organizacyjnej;</li>
       <li>16) „rachunku IZ” <em>należy przez to rozumieć </em>rachunek płatniczy IZ udostępniony na stronie
@@ -358,29 +358,29 @@
     <div style="text-align: center;">§ 4.</div>
   </div>
   <ol>
-    <li>1. Beneficjent zobowiązuje się do realizacji projektu z należytą starannością, w szczególności ponosząc
+    <li>Beneficjent zobowiązuje się do realizacji projektu z należytą starannością, w szczególności ponosząc
       wydatki celowo,
       rzetelnie, racjonalnie i oszczędnie z zachowaniem zasady uzyskiwania najlepszych efektów, zgodnie z
       obowiązującymi
       regułami, zasadami i postanowieniami wynikającymi z programu, uszczegółowienia, obowiązujących procedur,
       wytycznych oraz
       właściwych przepisów prawa krajowego oraz prawa unijnego.</li>
-    <li>2. Beneficjent oświadcza, że zapoznał się z treścią Wytycznych, o których mowa w § 1 pkt 22) oraz zapisami
+    <li>Beneficjent oświadcza, że zapoznał się z treścią Wytycznych, o których mowa w § 1 pkt 22) oraz zapisami
       SzOOP i
       zobowiązuje się do realizacji projektu zgodnie z ich zapisami, w tym ze szczegółowymi obowiązkami Beneficjenta
       określonymi w załączniku nr 3 do Umowy.</li>
-    <li>3. IZ zobowiązuje się powiadomić Beneficjenta o wszelkich zmianach Wytycznych, o których mowa w § 1 pkt 22).
+    <li>IZ zobowiązuje się powiadomić Beneficjenta o wszelkich zmianach Wytycznych, o których mowa w § 1 pkt 22).
       Powiadomienie następuje poprzez publikację komunikatu na stronie internetowej IZ.</li>
-    <li>4. Przy wydatkowaniu środków przyznanych w ramach projektu Beneficjent zobowiązuje się stosować przepisy
+    <li>Przy wydatkowaniu środków przyznanych w ramach projektu Beneficjent zobowiązuje się stosować przepisy
       prawa unijnego
       i krajowego oraz aktualną treść Wytycznych , o których mowa w § 1 pkt 22).</li>
-    <li>5. W przypadku, gdy ogłoszona po podpisaniu niniejszej Umowy wersja Wytycznych, o których mowa w § 1 pkt 22
+    <li>W przypadku, gdy ogłoszona po podpisaniu niniejszej Umowy wersja Wytycznych, o których mowa w § 1 pkt 22
       lit. e)
       wprowadza rozwiązania korzystniejsze dla Beneficjenta, to na pisemny wniosek Beneficjenta, w sytuacji wydatków
       poniesionych przed dniem obowiązywania nowej wersji Wytycznych, IZ może stosować zasady korzystniejsze dla
       Beneficjenta,
       o ile wydatki te nie zostały jeszcze zatwierdzone we wniosku o płatność.</li>
-    <li>6. Beneficjent oświadcza, iż projekt na dzień podpisania umowy spełnia wszystkie kryteria, na podstawie których
+    <li>Beneficjent oświadcza, iż projekt na dzień podpisania umowy spełnia wszystkie kryteria, na podstawie których
       został
       wybrany do dofinansowania.</li>
     <li><sup>13</sup> Beneficjent oświadcza, że w chwili zawarcia niniejszej umowy, wydatki w projekcie zawierają
@@ -420,7 +420,7 @@
 
 
 
-    <li>8. Beneficjent oraz Partnerzy projektu zobowiązani są do udostępniania dokumentacji finansowo-księgowej oraz
+    <li>Beneficjent oraz Partnerzy projektu zobowiązani są do udostępniania dokumentacji finansowo-księgowej oraz
       udzielania
       uprawnionym organom kontrolnym informacji umożliwiających weryfikację kwalifikowalności podatku VAT pod rygorem
       obowiązku zwrotu zrefundowanego ze środków unijnych w ramach projektu podatku VAT.</li>
@@ -673,7 +673,8 @@
       <li>2) refundacji<sup>21</sup></li>
     </ol>
   </div>
-  <div style="text-align: justify;">w wysokości określonej w Harmonogramie składania wniosków o płatność zwanym dalej
+  <div style="text-align: justify; margin-left:40px">w wysokości określonej w Harmonogramie składania wniosków o
+    płatność zwanym dalej
     „harmonogramem płatności” stanowiącym załącznik nr 2 do umowy z zastrzeżeniem § 11 ust. 2. Zaliczka jest udzielana
     Beneficjentowi w wysokości nie większej i na okres nie dłuższy niż jest to niezbędne dla prawidłowej realizacji
     projektu.<sup>22</sup></div>
@@ -737,170 +738,171 @@
           Beneficjenta:</strong><sup>26</sup></li>
     </ol>
   </div>
-  <p>{if $pole_1==''} Nazwa właściciela rachunku płatniczego:
-    ..................................................................... {else}<span>Nazwa właściciela rachunku
-      płatniczego: </span> {$pole_1} {/if}</p>
-  <p>{if $pole_2==''}<span style="text-decoration: line-through;"> Nr rachunku
-      płatniczego:.....................................................................</span><span>{else}Nr rachunku
-      płatniczego: {$pole_2}
-      {/if}<br /></span>
-  </p>
-  <ol type="a">
+
+
+
+  <div style="margin-left: 50px;">
+    {if $pole_1==''}
+    <p><span style="text-decoration: line-through;">Nazwa właściciela rachunku płatniczego:</span>
+      ..................................................................... {else}<span>Nazwa właściciela rachunku
+        płatniczego: </span> {$pole_1} {/if}</p>
+    <p>{if $pole_2==''}<span style="text-decoration: line-through;"> Nr rachunku
+        płatniczego:.....................................................................</span><span>{else}Nr rachunku
+        płatniczego: {$pole_2}
+        <br /></span>
+    </p>
+    {/if}
+
     <ol type="a">
       <li><strong>za pośrednictwem rachunku płatniczego transferowego:</strong></li>
     </ol>
-  </ol>
-  <p>{if $pole_3==''}<span style="text-decoration: line-through;">Nazwa właściciela rachunku płatniczego:
-      .....................................................................</span>{else}<span>Nazwa właściciela
-      rachunku
-      płatniczego: </span>{$pole_3} {/if}</p>
-  <p>{if $pole_4==''}<span style="text-decoration: line-through;"> Nr rachunku
-      płatniczego:.....................................................................</span><span>{else}Nr rachunku
-      płatniczego: {$pole_4}
-      {/if}<br /><br /></span></p>
-  <ol type="a">
-    <ol type="a">
+    <p>{if $pole_3==''}<span style="text-decoration: line-through;">Nazwa właściciela rachunku płatniczego:
+        .....................................................................</span>{else}<span>Nazwa właściciela
+        rachunku
+        płatniczego: </span>{$pole_3} {/if}</p>
+
+    <p>{if $pole_4==''}<span style="text-decoration: line-through;"> Nr rachunku
+        płatniczego:.....................................................................</span><span>{else}Nr rachunku
+        płatniczego: {$pole_4}
+        {/if}<br /><br /></span></p>
+
+    <ol type="a" start="2">
       <li><strong>dane rachunku bankowego realizatora projektu:</strong></li>
     </ol>
-  </ol>
-  <p>{if $pole_5==''}<span style="text-decoration: line-through;">Nazwa właściciela rachunku bankowego:
-      .....................................................................</span>{else}<span>Nazwa właściciela
-      rachunku
-      bankowego: </span>{$pole_5} {/if}</p>
-  <p>{if $pole_6==''}<span style="text-decoration: line-through;"> Nr rachunku
-      bankowego:………………………………………………………………………………………</span><span>{else}Nr rachunku bankowego: {$pole_6}
-      {/if}<br /></span>
-  </p>
-  <div style="text-align: justify;">
-    <ol start="13">
-      <li>Transze dofinansowania, o których mowa w § 11 ust. 1 umowy, z rachunku płatniczego transferowego, o którym
-        mowa w ust. 12 są przekazywane bez zbędnej zwłoki na wyodrębniony dla projektu rachunek płatniczy
-        .<sup>27</sup>
-      </li>
-      <li>Beneficjent zobowiązuje się niezwłocznie poinformować IZ o zmianie rachunków płatniczych, o których mowa w
-        ust. 12 niniejszego paragrafu. Przedmiotowa zmiana skutkuje koniecznością aneksowania umowy o dofinansowanie
-        projektu.</li>
-      <li>Odsetki bankowe od przekazanych Beneficjentowi transz dofinansowania podlegają zwrotowi na rachunek IZ, o
-        ile
-        przepisy odrębne nie stanowią inaczej, najpóźniej do 30 dni po zakończonej realizacji projektu. W tytule
-        przelewu Beneficjent wskazuje numer umowy o dofinansowanie oraz tytuł zwrotu.</li>
-      <li>Beneficjent we wniosku o płatność przekazuje informacje o odsetkach, o których mowa w ust. 15.<sup>28</sup>
-      </li>
-      <li>Kwota dofinansowania w formie płatności ze środków europejskich oraz dotacji celowej, o której mowa w § 2
-        ust.
-        1 pkt 1) i 2), niewydatkowana z końcem roku budżetowego, pozostaje na rachunku płatniczym , o którym mowa w
-        ust.
-        12, do dyspozycji Beneficjenta w następnym roku budżetowym, z zastrzeżeniem § 12 ust. 2 i 8 oraz § 36 ust. 3.
-      </li>
-      <li>Beneficjent każdorazowo zobowiązany jest do niezwłocznego złożenia do IZ drogą elektroniczną informacji
-        dotyczącej zwrotu środków, zawierającej:</li>
-    </ol>
-    <ol type="none">
-      <li>1) numer projektu;</li>
-      <li>2) wysokość środków w poszczególnych paragrafach klasyfikacji budżetowej;<sup>29</sup></li>
-      <li>3) podział na kwotę należności głównej i kwotę odsetek ze wskazaniem na źródła finansowania (płatność ze
-        środków
-        europejskich i dotacja celowa);</li>
-      <li>4) wskazanie daty transzy, z jakiej zostały przekazane środki, których dotyczy zwrot z uwzględnieniem źródeł
-        finansowania;</li>
-      <li>5) tytuł zwrotu (np. należność główna, odsetki, decyzja administracyjna, itp.).</li>
-    </ol>
+    <p>{if $pole_5==''}<span style="text-decoration: line-through;">Nazwa właściciela rachunku bankowego:
+        .....................................................................</span>{else}<span>Nazwa właściciela
+        rachunku
+        bankowego: </span>{$pole_5} {/if}</p>
+    <p>{if $pole_6==''}<span style="text-decoration: line-through;"> Nr rachunku
+        bankowego:………………………………………………………………………………………</span><span>{else}Nr rachunku bankowego: {$pole_6}
+        {/if}<br /></span>
+    </p>
   </div>
-  <div style="text-align: justify;"></div>
 
 
+
+  <ol start="13">
+    <li>Transze dofinansowania, o których mowa w § 11 ust. 1 umowy, z rachunku płatniczego transferowego, o którym
+      mowa w ust. 12 są przekazywane bez zbędnej zwłoki na wyodrębniony dla projektu rachunek płatniczy
+      .<sup>27</sup>
+    </li>
+    <li>Beneficjent zobowiązuje się niezwłocznie poinformować IZ o zmianie rachunków płatniczych, o których mowa w
+      ust. 12 niniejszego paragrafu. Przedmiotowa zmiana skutkuje koniecznością aneksowania umowy o dofinansowanie
+      projektu.</li>
+    <li>Odsetki bankowe od przekazanych Beneficjentowi transz dofinansowania podlegają zwrotowi na rachunek IZ, o
+      ile
+      przepisy odrębne nie stanowią inaczej, najpóźniej do 30 dni po zakończonej realizacji projektu. W tytule
+      przelewu Beneficjent wskazuje numer umowy o dofinansowanie oraz tytuł zwrotu.</li>
+    <li>Beneficjent we wniosku o płatność przekazuje informacje o odsetkach, o których mowa w ust. 15.<sup>28</sup>
+    </li>
+    <li>Kwota dofinansowania w formie płatności ze środków europejskich oraz dotacji celowej, o której mowa w § 2
+      ust.
+      1 pkt 1) i 2), niewydatkowana z końcem roku budżetowego, pozostaje na rachunku płatniczym , o którym mowa w
+      ust.
+      12, do dyspozycji Beneficjenta w następnym roku budżetowym, z zastrzeżeniem § 12 ust. 2 i 8 oraz § 36 ust. 3.
+    </li>
+    <li>Beneficjent każdorazowo zobowiązany jest do niezwłocznego złożenia do IZ drogą elektroniczną informacji
+      dotyczącej zwrotu środków, zawierającej:</li>
+  </ol>
+  <ol type="none">
+    <li>1) numer projektu;</li>
+    <li>2) wysokość środków w poszczególnych paragrafach klasyfikacji budżetowej;<sup>29</sup></li>
+    <li>3) podział na kwotę należności głównej i kwotę odsetek ze wskazaniem na źródła finansowania (płatność ze
+      środków
+      europejskich i dotacja celowa);</li>
+    <li>4) wskazanie daty transzy, z jakiej zostały przekazane środki, których dotyczy zwrot z uwzględnieniem źródeł
+      finansowania;</li>
+    <li>5) tytuł zwrotu (np. należność główna, odsetki, decyzja administracyjna, itp.).</li>
+  </ol>
 
 
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 11 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <div style="text-align: justify;">
-    <div style="text-align: center;">
-      <div style="text-align: center;">§ 11.</div>
-    </div>
+
+  <div style="text-align: center;">
+    <div style="text-align: center;">§ 11.</div>
   </div>
 
+
   <ol>
-    <div style="text-align: justify;">
-      <li>Strony ustalają następujące warunki przekazania transzy dofinansowania, z uwzględnieniem ust. 2-6:
-        <ol type="none">
-          <li>1) pierwsza transza dofinansowania przekazywana jest na podstawie złożonego wniosku o płatność w
-            wysokości
-            określonej w harmonogramie płatności, o którym mowa w § 10 ust. 1, pod warunkiem wniesienia
-            zabezpieczenia, o
-            którym mowa w § 18 umowy.<sup>30</sup> Maksymalna
-            wysokość pierwszej transzy jest ustalana indywidualnie dla każdego projektu przez IZ,</li>
-          <li>2) kolejna transza zaliczki przekazywana jest po spełnieniu następujących warunków:
-            <ol type="a">
-              <li>zatwierdzeniu wniosku o płatność za poprzedni okres rozliczeniowy, zgodnie z § 12 ust. 7 umowy;</li>
-              <li>złożeniu przez Beneficjenta i zweryfikowaniu przez IZ pierwszej wersji wniosku o płatność
-                rozliczającego
-                wydatki stanowiące co najmniej 70% łącznej kwoty dotychczas otrzymanych transz zaliczek;</li>
-              <li>niestwierdzeniu okoliczności, o których mowa w § 34.</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-
-      <li>Przekazanie transzy środków na dofinansowanie projektu, o której mowa w ust. 1, może nastąpić albo po
-        zatwierdzeniu wniosku o płatność (w przypadku gdy wniosek o płatność jest prawidłowy) albo po odesłaniu
-        Beneficjentowi wniosku do poprawy (w przypadku gdy wniosek o płatność wymaga dalszych korekt), przy spełnieniu
-        warunków, o których mowa w ust. 1 pkt 2).</li>
-      <li>Nie jest możliwe przekazanie kolejnej transzy dofinansowania w przypadku braku zatwierdzenia wniosku o
-        płatność
-        za poprzedni okres rozliczeniowy:
-
-        <ol type="none">
-          <li>1) w chwili zatwierdzania do wypłaty kolejnej transzy dofinansowania IZ jest zobowiązana do
-            uwzględnienia
-            środków
-            faktycznie przekazanych Beneficjentowi na dzień zatwierdzenia wniosku o płatność, w tym również po
-            złożeniu
-            przez Beneficjenta wniosku o płatność, co do których IZ dokonała zlecenia płatności,</li>
-          <li>2) limit 70% dofinansowania rozpatrywany jest kumulatywnie. IZ dokonuje porównania rozliczonych
-            dotychczas w
-            ramach projektu wydatków, biorąc pod uwagę wydatki w zatwierdzonych uprzednio wnioskach o płatność,
-            pomniejszonych o stwierdzone wydatki niekwalifikowalne/nieprawidłowości.</li>
-        </ol>
-      </li>
-      <li>Transze dofinansowania wypłacane są:
-
-        <ol type="none">
-          <li>1) w przypadku środków, o których mowa w § 2 ust. 1 pkt 1), przez Bank Gospodarstwa Krajowego, na
-            podstawie
-            zlecenia płatności wystawionego pod warunkiem dostępności środków w ramach upoważnienia, wydanego na
-            podstawie
-            art. 188 ust. 2 UFP do wydawania zgody na dokonywanie płatności,</li>
-          <li>2) w przypadku środków, o których mowa w § 2 ust. 1 pkt 2), pod warunkiem dostępności środków na
-            rachunku
-            IZ.
-          </li>
-        </ol>
-      </li>
-      <li>Beneficjent przedkłada wniosek o płatność w wersji elektronicznej za pośrednictwem ePUAP/SEKAP sporządzony
-        przy użyciu LSI udostępnionego Beneficjentowi przez IZ zgodnie z zamieszczoną na stronie internetowej
-        instrukcją, chyba że z powodu awarii lub unieruchomienia systemu nie jest to możliwe. W takim przypadku
-        Beneficjent zobowiązuje się do sporządzenia wniosku o płatność poza LSI zgodnie ze wzorem zamieszczonym na
-        stronie internetowej IZ oraz do złożenia wniosku za pośrednictwem ePUAP/SEKAP. Po ustaniu awarii lub
-        uruchomieniu systemu, Beneficjent zobowiązany jest do niezwłocznego sporządzenia wniosku o płatność przy
-        użyciu
-        LSI i ponownego przekazania go za pośrednictwem ePUAP/SEKAP w terminie wyznaczonym przez IZ, pod rygorem
-        zastosowania § 34 ust. 2 pkt 4) i 5).</li>
-      <li>Beneficjent zobowiązuje się do przedkładania wraz z wnioskiem o płatność, o którym mowa w § 12:</li>
-
+    <li>Strony ustalają następujące warunki przekazania transzy dofinansowania, z uwzględnieniem ust. 2-6:
       <ol type="none">
-        <li>1) informacji o wszystkich uczestnikach projektu, stosując regulację wynikającą z RODO;</li>
-        <li>2) dokumentów, o których mowa w § 6 ust. 2 ).<sup>31</sup>
+        <li>1) pierwsza transza dofinansowania przekazywana jest na podstawie złożonego wniosku o płatność w
+          wysokości
+          określonej w harmonogramie płatności, o którym mowa w § 10 ust. 1, pod warunkiem wniesienia
+          zabezpieczenia, o
+          którym mowa w § 18 umowy.<sup>30</sup> Maksymalna
+          wysokość pierwszej transzy jest ustalana indywidualnie dla każdego projektu przez IZ,</li>
+        <li>2) kolejna transza zaliczki przekazywana jest po spełnieniu następujących warunków:
+          <ol type="a">
+            <li>zatwierdzeniu wniosku o płatność za poprzedni okres rozliczeniowy, zgodnie z § 12 ust. 7 umowy;</li>
+            <li>złożeniu przez Beneficjenta i zweryfikowaniu przez IZ pierwszej wersji wniosku o płatność
+              rozliczającego
+              wydatki stanowiące co najmniej 70% łącznej kwoty dotychczas otrzymanych transz zaliczek;</li>
+            <li>niestwierdzeniu okoliczności, o których mowa w § 34.</li>
+          </ol>
         </li>
       </ol>
-    </div>
-    <div style="text-align: justify;">Na wezwanie IZ Beneficjent przedkłada dokumenty związane z realizacją projektu,
-      zgodnie z § 29 ust. 4 w tym w szczególności: dokumenty wykazane we wniosku o płatność, wyciągi z rachunku
-      płatniczego, o którym mowa w § 10 ust. 12 lub historii z tego rachunku płatniczego , wyciągi bankowe z innych
-      rachunków bankowych lub inne dokumenty potwierdzające poniesienie wydatków ujętych we wniosku o płatność, a w
-      przypadku płatności gotówkowych oryginały raportów kasowych (bez załączników) lub podpisanych przez Beneficjenta
-      zestawień płatności gotówkowych objętych wnioskiem o płatność.</div>
-    <div style="text-align: justify;"></div>
+    </li>
 
+    <li>Przekazanie transzy środków na dofinansowanie projektu, o której mowa w ust. 1, może nastąpić albo po
+      zatwierdzeniu wniosku o płatność (w przypadku gdy wniosek o płatność jest prawidłowy) albo po odesłaniu
+      Beneficjentowi wniosku do poprawy (w przypadku gdy wniosek o płatność wymaga dalszych korekt), przy spełnieniu
+      warunków, o których mowa w ust. 1 pkt 2).</li>
+    <li>Nie jest możliwe przekazanie kolejnej transzy dofinansowania w przypadku braku zatwierdzenia wniosku o
+      płatność
+      za poprzedni okres rozliczeniowy:
+
+      <ol type="none">
+        <li>1) w chwili zatwierdzania do wypłaty kolejnej transzy dofinansowania IZ jest zobowiązana do
+          uwzględnienia
+          środków
+          faktycznie przekazanych Beneficjentowi na dzień zatwierdzenia wniosku o płatność, w tym również po
+          złożeniu
+          przez Beneficjenta wniosku o płatność, co do których IZ dokonała zlecenia płatności,</li>
+        <li>2) limit 70% dofinansowania rozpatrywany jest kumulatywnie. IZ dokonuje porównania rozliczonych
+          dotychczas w
+          ramach projektu wydatków, biorąc pod uwagę wydatki w zatwierdzonych uprzednio wnioskach o płatność,
+          pomniejszonych o stwierdzone wydatki niekwalifikowalne/nieprawidłowości.</li>
+      </ol>
+    </li>
+    <li>Transze dofinansowania wypłacane są:
+
+      <ol type="none">
+        <li>1) w przypadku środków, o których mowa w § 2 ust. 1 pkt 1), przez Bank Gospodarstwa Krajowego, na
+          podstawie
+          zlecenia płatności wystawionego pod warunkiem dostępności środków w ramach upoważnienia, wydanego na
+          podstawie
+          art. 188 ust. 2 UFP do wydawania zgody na dokonywanie płatności,</li>
+        <li>2) w przypadku środków, o których mowa w § 2 ust. 1 pkt 2), pod warunkiem dostępności środków na
+          rachunku
+          IZ.
+        </li>
+      </ol>
+    </li>
+    <li>Beneficjent przedkłada wniosek o płatność w wersji elektronicznej za pośrednictwem ePUAP/SEKAP sporządzony
+      przy użyciu LSI udostępnionego Beneficjentowi przez IZ zgodnie z zamieszczoną na stronie internetowej
+      instrukcją, chyba że z powodu awarii lub unieruchomienia systemu nie jest to możliwe. W takim przypadku
+      Beneficjent zobowiązuje się do sporządzenia wniosku o płatność poza LSI zgodnie ze wzorem zamieszczonym na
+      stronie internetowej IZ oraz do złożenia wniosku za pośrednictwem ePUAP/SEKAP. Po ustaniu awarii lub
+      uruchomieniu systemu, Beneficjent zobowiązany jest do niezwłocznego sporządzenia wniosku o płatność przy
+      użyciu
+      LSI i ponownego przekazania go za pośrednictwem ePUAP/SEKAP w terminie wyznaczonym przez IZ, pod rygorem
+      zastosowania § 34 ust. 2 pkt 4) i 5).</li>
+
+    <li>Beneficjent zobowiązuje się do przedkładania wraz z wnioskiem o płatność, o którym mowa w § 12:
+      <ol type="none">
+        <li>1) informacji o wszystkich uczestnikach projektu, stosując regulację wynikającą z RODO;</li>
+        <li>2) dokumentów, o których mowa w § 6 ust. 2).<sup>31</sup>
+        </li>
+      </ol>
+      <div style="text-align: justify;">Na wezwanie IZ Beneficjent przedkłada dokumenty związane z realizacją projektu,
+        zgodnie z § 29 ust. 4 w tym w szczególności: dokumenty wykazane we wniosku o płatność, wyciągi z rachunku
+        płatniczego, o którym mowa w § 10 ust. 12 lub historii z tego rachunku płatniczego , wyciągi bankowe z innych
+        rachunków bankowych lub inne dokumenty potwierdzające poniesienie wydatków ujętych we wniosku o płatność, a w
+        przypadku płatności gotówkowych oryginały raportów kasowych (bez załączników) lub podpisanych przez Beneficjenta
+        zestawień płatności gotówkowych objętych wnioskiem o płatność.</div>
+    </li>
     <li>W przypadku gdy z powodu awarii lub unieruchomienia systemu nie jest możliwe przedłożenie informacji o której
       mowa w ust. 6 pkt 1), Beneficjent zobowiązuje się do przekazania za pośrednictwem ePUAP/SEKAP danych o
       uczestnikach projektu w formie i zakresie określonym przez IZ. Po ustaniu awarii lub uruchomieniu systemu,
@@ -926,38 +928,39 @@
   <ol>
     <li>Beneficjent składa wniosek o płatność, będący podstawą wypłaty pierwszej transzy dofinansowania zgodnie § 11
       ust. 1 pkt 1), w terminie 10 dni roboczych od zakończenia okresu rozliczeniowego, jednak nie wcześniej niż dzień
-      po zakończeniu tego okresu.</li>
+      po zakończeniu tego okresu.
+      <div style="text-align: justify;">W sytuacji podpisania umowy po rozpoczęciu realizacji projektu termin złożenia
+        pierwszego wniosku o płatność wynosi:</div>
+
+
+
+      <ol type="none">
+        <li>1) 10 dni roboczych od dnia jej podpisania;</li>
+        <li>2) 15 dni roboczych od dnia jej podpisania w przypadku projektów o wartości przekraczającej limit, o którym
+          mowa
+          w § 18 ust. 4.</li>
+      </ol>
+    </li>
+    <li>Beneficjent składa drugi i kolejne wnioski o płatność zgodnie z harmonogramem płatności, o którym mowa w §
+      10
+      ust. 1, w terminie<sup>32</sup> do 10 dni roboczych od
+      zakończenia okresu rozliczeniowego, z zastrzeżeniem, że złożenie końcowego wniosku o płatność oraz zwrot
+      środków
+      pozostałych do rozliczenia na rachunek IZ następuje w terminie do 30 dni kalendarzowych od dnia zakończenia
+      okresu realizacji projektu. W przypadku niedokonania zwrotu w ww. terminie, stosuje się odpowiednio zapisy §
+      15
+      niniejszej umowy. Okres za jaki składany jest wniosek o płatność może zawierać niepełne miesiące/kwartały.
+    </li>
   </ol>
 
-  <div style="text-align: justify;">W sytuacji podpisania umowy po rozpoczęciu realizacji projektu termin złożenia
-    pierwszego wniosku o płatność wynosi:</div>
-  <div style="text-align: justify;">
-    <ol type="none">
-      <li>1) 10 dni roboczych od dnia jej podpisania;</li>
-      <li>2) 15 dni roboczych od dnia jej podpisania w przypadku projektów o wartości przekraczającej limit, o którym
-        mowa
-        w § 18 ust. 4.</li>
-    </ol>
-    <ol start="2">
-      <li>Beneficjent składa drugi i kolejne wnioski o płatność zgodnie z harmonogramem płatności, o którym mowa w §
-        10
-        ust. 1, w terminie<sup>32</sup> do 10 dni roboczych od
-        zakończenia okresu rozliczeniowego, z zastrzeżeniem, że złożenie końcowego wniosku o płatność oraz zwrot
-        środków
-        pozostałych do rozliczenia na rachunek IZ następuje w terminie do 30 dni kalendarzowych od dnia zakończenia
-        okresu realizacji projektu. W przypadku niedokonania zwrotu w ww. terminie, stosuje się odpowiednio zapisy §
-        15
-        niniejszej umowy. Okres za jaki składany jest wniosek o płatność może zawierać niepełne miesiące/kwartały.
-      </li>
-    </ol>
-  </div>
-  <div style="text-align: justify;">2a. Beneficjent może przedstawić do rozliczenia we wniosku o płatność kwotę inną
+  <div style="text-align: justify; margin-left: 30px;">2a. Beneficjent może przedstawić do rozliczenia we wniosku o
+    płatność kwotę inną
     niż
     wynika z obowiązującego na dzień złożenia wniosku harmonogramu płatności. W przypadku gdy Beneficjent przedstawi
     łącznie do rozliczenia kwotę niższą niż 70% dotychczas otrzymanych środków dofinansowania nie może wnioskować o
     kolejną zaliczkę, zgodnie z § 11 ust. 1.</div>
-  <div style="text-align: justify;">
 
+  <div style="text-align: justify;">
     <ol start="3">
       <li>IZ dokonuje weryfikacji formalno-rachunkowej i merytorycznej wniosku o płatność, w terminie do 20 dni
         roboczych od daty jego otrzymania, przy czym termin ten dotyczy każdej złożonej przez Beneficjenta wersji
@@ -1027,7 +1030,7 @@
           kolejnej transzy dofinansowania zgodnie z § 11.</li>
       </ol>
     </li>
-    <li>8. Beneficjent zobowiązany jest do rozliczenia 100% środków pozostałych do rozliczenia w końcowym wniosku o
+    <li>Beneficjent zobowiązany jest do rozliczenia 100% środków pozostałych do rozliczenia w końcowym wniosku o
       płatność.
       Jeżeli z końcowego rozliczenia projektu wynika, iż w projekcie wystąpiły oszczędności, Beneficjent jest
       zobowiązany
@@ -1259,7 +1262,7 @@
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 18 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div style="text-align: justify;">
       <div style="text-align: center;">
-        <div style="text-align: center;">§ 18.</div>
+        <div style="text-align: center;">§ 18.</div><sup>39</sup>
       </div>
     </div>
 
@@ -1464,60 +1467,58 @@
 
 
   <div style="text-align: center;"><strong>Pomoc publiczna/Pomoc de minimis</strong><sup>44</sup></div>
+
+
+
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 23 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style="text-align: justify;">
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 23 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <div style="text-align: justify;">
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 23.</div>
-      </div>
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 23.</div>
     </div>
-
-    <ol>
-      <li>Pomoc publiczna/pomoc de minimis udzielana w oparciu o niniejszą umowę,<sup>45</sup> jest zgodna ze wspólnym
-        rynkiem oraz art. 107 Traktatu o
-        funkcjonowaniu Unii Europejskiej i dlatego jest zwolniona z wymogu notyfikacji zgodnie z art. 108 Traktatu o
-        funkcjonowaniu Unii Europejskiej.</li>
-      <li>Pomoc, o której mowa w ust. 1, udzielana jest na podstawie Rozporządzenia Ministra Infrastruktury i Rozwoju
-        z dnia 2
-        lipca 2015r. w sprawie udzielania pomocy de minimis oraz pomocy publicznej w ramach programów operacyjnych
-        finansowanych
-        z Europejskiego Funduszu Społecznego na lata 2014-2020 (Dz.U. z 2015 r. poz. 1073) o numerze referencyjnym
-        SA.43592(2015/X).<sup>46</sup></li>
-    </ol>
-
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 24 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <div style="text-align: justify;">
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 24.</div>
-      </div>
-    </div>
-
-    <ol>
-      <li>W oparciu o niniejszą umowę Beneficjentowi przyznana zostaje pomoc publiczna/pomoc de minimis, w wysokości i
-        zakresie określonym w aktualnym wniosku o dofinansowanie<sup>47</sup>.</li>
-      <li>W przypadku stwierdzenia, iż nie zostały dotrzymane warunki udzielania pomocy określone w rozporządzeniu, o
-        którym mowa w § 23 ust. 2 niniejszej umowy, w szczególności gdy stwierdzone zostanie, że pomoc została
-        wykorzystana niezgodnie z przeznaczeniem lub stwierdzone zostanie niedotrzymanie warunków dotyczących:</li>
-      <ol type="a">
-        <li>wystąpienia efektu zachęty,</li>
-        <li>dopuszczalnej intensywności pomocy, jeśli dotyczy danego rodzaju pomocy udzielanej w ramach niniejszej
-          umowy,
-        </li>
-        <li>dopuszczalnego pułapu pomocy de minimis określonego w rozporządzeniu, o którym mowa w § 23 ust. 2
-          niniejszej
-          umowy.</li>
-      </ol>
-    </ol>
   </div>
-  <div style="text-align: justify;">Beneficjent zobowiązuje się do zwrotu całości lub części przyznanej pomocy wraz z
-    odsetkami naliczanymi jak dla zaległości podatkowych, na zasadach i w terminie określonym w § 15 ust. 2, 3
-    niniejszej umowy.</div>
+
+  <ol>
+    <li>Pomoc publiczna/pomoc de minimis udzielana w oparciu o niniejszą umowę,<sup>45</sup> jest zgodna ze wspólnym
+      rynkiem oraz art. 107 Traktatu o
+      funkcjonowaniu Unii Europejskiej i dlatego jest zwolniona z wymogu notyfikacji zgodnie z art. 108 Traktatu o
+      funkcjonowaniu Unii Europejskiej.</li>
+    <li>Pomoc, o której mowa w ust. 1, udzielana jest na podstawie Rozporządzenia Ministra Infrastruktury i Rozwoju
+      z dnia 2
+      lipca 2015r. w sprawie udzielania pomocy de minimis oraz pomocy publicznej w ramach programów operacyjnych
+      finansowanych
+      z Europejskiego Funduszu Społecznego na lata 2014-2020 (Dz.U. z 2015 r. poz. 1073) o numerze referencyjnym
+      SA.43592(2015/X).<sup>46</sup></li>
+  </ol>
 
 
+
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 24 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+  <div style="text-align: center;">
+    <div style="text-align: center;">§ 24.</div>
+  </div>
+
+
+  <ol>
+    <li>W oparciu o niniejszą umowę Beneficjentowi przyznana zostaje pomoc publiczna/pomoc de minimis, w wysokości i
+      zakresie określonym w aktualnym wniosku o dofinansowanie<sup>47</sup>.</li>
+    <li>W przypadku stwierdzenia, iż nie zostały dotrzymane warunki udzielania pomocy określone w rozporządzeniu, o
+      którym mowa w § 23 ust. 2 niniejszej umowy, w szczególności gdy stwierdzone zostanie, że pomoc została
+      wykorzystana niezgodnie z przeznaczeniem lub stwierdzone zostanie niedotrzymanie warunków dotyczących:</li>
+    <ol type="a">
+      <li>wystąpienia efektu zachęty,</li>
+      <li>dopuszczalnej intensywności pomocy, jeśli dotyczy danego rodzaju pomocy udzielanej w ramach niniejszej
+        umowy,
+      </li>
+      <li>dopuszczalnego pułapu pomocy de minimis określonego w rozporządzeniu, o którym mowa w § 23 ust. 2
+        niniejszej
+        umowy.
+      </li>
+    </ol>
+    <div style="text-align: justify;">Beneficjent zobowiązuje się do zwrotu całości lub części przyznanej pomocy wraz z
+      odsetkami naliczanymi jak dla zaległości podatkowych, na zasadach i w terminie określonym w § 15 ust. 2, 3
+      niniejszej umowy.</div>
+  </ol>
 
 
 
@@ -1970,7 +1971,7 @@
     <div style="text-align: justify;">
       <ol>
         <li>Beneficjent zobowiązuje się do zawarcia z IZ odrębnej umowy przeniesienia autorskich praw majątkowych do
-          utworów<sup>51</sup>wytworzonych w ramach
+          utworów<sup>51</sup> wytworzonych w ramach
           projektu, obejmującej jednocześnie udzielenie licencji przez IZ na rzecz Beneficjenta w celu korzystania z
           ww.
           utworów. Umowa, o której mowa w zdaniu pierwszym zawierana jest na pisemny wniosek IZ w ramach kwoty, o
@@ -2519,7 +2520,7 @@
       <div style="text-align: justify;"><sup>36</sup> IZ może
         dokonać uzupełnienia lub poprawienia wniosku o płatność w zakresie oczywistych omyłek, o czym informuje
         Beneficjenta.</div>
-      <div style="text-align: justify;"><sup>37</sup>> Dotyczy
+      <div style="text-align: justify;"><sup>37</sup> Dotyczy
         Beneficjentów zobowiązanych do wniesienia wkładu własnego.</div>
       <div style="text-align: justify;"><sup>38</sup> Dotyczy
         jednostek sektora finansów publicznych.</div>
