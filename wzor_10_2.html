@@ -268,7 +268,7 @@
         <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_wklad_wlasny)} %</strong> wydatków projektu jest
         niekwalifikowalny.<sup>9</sup> W projekcie nie ma możliwości
         wniesienia wkładu własnego w ramach kosztów pośrednich, o których mowa <br /> w § 5 ust. 1.<sup>10</sup></div>
-      <div style="text-align: justify;">
+    <li style="text-align: justify;">
 
     <li>Beneficjent zobowiązuje się do rozliczenia projektu, zgodnie z montażem finansowym przedstawionym w ust. 1
       niniejszego paragrafu. Montaż finansowy, o którym mowa w zdaniu pierwszym, odnosi się do poniesionych w ramach
@@ -279,9 +279,9 @@
 
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <div style="text-align: center;">
-    <div style="text-align: center;">§ 3.</div>
-  </div>
+
+  <div style="text-align: center;">§ 3.</div>
+
   <ol>
     <li>Beneficjent zobowiązuje się do osiągnięcia następujących wskaźników produktu na zakończenie realizacji
       projektu:</li>
@@ -490,20 +490,96 @@
 
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 6 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+  {if $stawki_jednostkowe == null}
   <div style="text-align: justify;">
     <div style="text-align: center;">
-      <div style="text-align: center;">§ 6.</div>
+      <div style="text-align: center; text-decoration: line-through;">§ 6.<sup>15</sup></div>
     </div>
   </div>
-
-
-
-  <ol>
+  <ol style="text-decoration: line-through;">
     <li>Beneficjent rozlicza usługi objęte stawkami jednostkowymi, zgodnie z Wytycznymi, o których mowa w § 1 pkt 22)
       lit. e oraz zgodnie z wnioskiem. W związku z powyższym Beneficjent zobowiązuje się przedstawienia wymienionych
       poniżej dokumentów potwierdzających wykonanie określonej stawki jednostkowej.</li>
   </ol>
 
+
+  <table style="border-collapse:collapse;border-spacing:0;margin-left:30px; text-decoration: line-through;">
+    <tbody>
+      <tr>
+        <td width="264"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;vertical-align: text-bottom; margin-left: 0;">
+
+          1)
+        </td>
+        <td width="289"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:15px 5px 5px 5px;overflow:hidden;word-break:normal;border-color:black;">
+          <p></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="264"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+          <p>Nazwa stawki jednostkowej</p>
+        </td>
+        <td width="289"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        </td>
+      </tr>
+
+      <tr>
+        <td width="264"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+          <p>Kwota stawki jednostkowej</p>
+        </td>
+        <td width="289"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+
+        </td>
+      </tr>
+
+      <tr>
+        <td width="264"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+          <p>Dokumenty potwierdzające wykonanie stawki jednostkowej<sup>16</sup></p>
+        </td>
+        <td width="289"
+          style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+          <p></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div style="text-align: justify;margin-left: 30px; text-decoration: line-through;">Ww. dokumenty mogą podlegać
+    kontroli podczas weryfikacji wniosku o płatność oraz
+    kontroli na miejscu.</div>
+  {else}
+  <span style="font-size: 0;">Nie brak</span>
+  {/if}
+
+
+
+
+
+  {if $stawki_jednostkowe == null}
+  <span style="font-size: 0;">Nie brak</span>
+  {else}
+  <div style="text-align: justify;">
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 6.<sup>15</sup></div>
+    </div>
+  </div>
+  <ol>
+    <li>Beneficjent rozlicza usługi objęte stawkami jednostkowymi, zgodnie z Wytycznymi, o których mowa w § 1 pkt 22)
+      lit. e oraz zgodnie z wnioskiem. W związku z powyższym Beneficjent zobowiązuje się przedstawienia wymienionych
+      poniżej dokumentów potwierdzających wykonanie określonej stawki jednostkowej.</li>
+  </ol>
+  {/if}
 
 
 
@@ -561,11 +637,13 @@
   </table>
   {/foreach}
 
-
-  <div style="text-align: justify;"></div>
-  <div style="text-align: justify;">Ww. dokumenty mogą podlegać kontroli podczas weryfikacji wniosku o płatność oraz
+  {if $stawki_jednostkowe == null}
+  <span style="font-size: 0;">Nie brak</span>
+  {else}
+  <div style="text-align: justify;margin-left: 30px;">Ww. dokumenty mogą podlegać kontroli podczas weryfikacji wniosku o
+    płatność oraz
     kontroli na miejscu.</div>
-
+  {/if}
 
 
   <div style="text-align: justify;">
@@ -960,39 +1038,37 @@
     łącznie do rozliczenia kwotę niższą niż 70% dotychczas otrzymanych środków dofinansowania nie może wnioskować o
     kolejną zaliczkę, zgodnie z § 11 ust. 1.</div>
 
-  <div style="text-align: justify;">
-    <ol start="3">
-      <li>IZ dokonuje weryfikacji formalno-rachunkowej i merytorycznej wniosku o płatność, w terminie do 20 dni
-        roboczych od daty jego otrzymania, przy czym termin ten dotyczy każdej złożonej przez Beneficjenta wersji
-        wniosku o płatność<sup>33</sup>. W przypadku gdy:
+  <ol start="3">
+    <li>IZ dokonuje weryfikacji formalno-rachunkowej i merytorycznej wniosku o płatność, w terminie do 20 dni
+      roboczych od daty jego otrzymania, przy czym termin ten dotyczy każdej złożonej przez Beneficjenta wersji
+      wniosku o płatność<sup>33</sup>. W przypadku gdy:
 
-        <ol type="none">
-          <li>1) w ramach projektu jest dokonywana kontrola i złożony został końcowy wniosek o płatność, termin jego
-            weryfikacji ulega przerwaniu i biegnie od nowa od dnia przekazania do IZ informacji o
-            wykonaniu/zaniechaniu
-            wykonania zaleceń pokontrolnych, chyba że wyniki kontroli zawarte w Informacji Pokontrolnej nie wskazują
-            wystąpienia wydatków niekwalifikowalnych/nieprawidłowości w projekcie lub nie mają wpływu na rozliczenie
-            końcowe
-            projektu;</li>
-          <li>2) dokonywana jest przez IZ kontrola doraźna na projekcie, termin weryfikacji każdego złożonego przez
-            Beneficjenta wniosku o płatność ulega przerwaniu i biegnie od nowa, chyba że IZ ma możliwość wyłączenia z
-            wniosku o płatność zakwestionowanych wydatków i zatwierdzenia pozostałych wydatków wykazanych w danym
-            wniosku
-            o
-            płatność;<sup>34</sup></li>
-          <li>3) dokonywana jest kontrola planowa i złożony został wniosek o płatność<sup>35</sup>, dokonywana jest
-            jego
-            weryfikacja z możliwością
-            wyłączenia
-            wydatków niekwalifikowalnych/nieprawidłowości w projekcie stwierdzonych na etapie kontroli;</li>
-          <li>4) w siedzibie IZ dokonywana jest weryfikacja dokumentacji źródłowej dotyczącej rozliczanych wydatków w
-            złożonym
-            wniosku o płatność, termin weryfikacji wniosku o płatność może ulec wydłużeniu z uwagi na skomplikowany
-            charakter sprawy lub IZ dopuszcza możliwość zatwierdzenia wniosku o płatność z wyłączeniem wydatków
-            podlegających dalszej weryfikacji.</li>
-      </li>
-    </ol>
-
+      <ol type="none">
+        <li>1) w ramach projektu jest dokonywana kontrola i złożony został końcowy wniosek o płatność, termin jego
+          weryfikacji ulega przerwaniu i biegnie od nowa od dnia przekazania do IZ informacji o
+          wykonaniu/zaniechaniu
+          wykonania zaleceń pokontrolnych, chyba że wyniki kontroli zawarte w Informacji Pokontrolnej nie wskazują
+          wystąpienia wydatków niekwalifikowalnych/nieprawidłowości w projekcie lub nie mają wpływu na rozliczenie
+          końcowe
+          projektu;</li>
+        <li>2) dokonywana jest przez IZ kontrola doraźna na projekcie, termin weryfikacji każdego złożonego przez
+          Beneficjenta wniosku o płatność ulega przerwaniu i biegnie od nowa, chyba że IZ ma możliwość wyłączenia z
+          wniosku o płatność zakwestionowanych wydatków i zatwierdzenia pozostałych wydatków wykazanych w danym
+          wniosku
+          o
+          płatność;<sup>34</sup></li>
+        <li>3) dokonywana jest kontrola planowa i złożony został wniosek o płatność<sup>35</sup>, dokonywana jest
+          jego
+          weryfikacja z możliwością
+          wyłączenia
+          wydatków niekwalifikowalnych/nieprawidłowości w projekcie stwierdzonych na etapie kontroli;</li>
+        <li>4) w siedzibie IZ dokonywana jest weryfikacja dokumentacji źródłowej dotyczącej rozliczanych wydatków w
+          złożonym
+          wniosku o płatność, termin weryfikacji wniosku o płatność może ulec wydłużeniu z uwagi na skomplikowany
+          charakter sprawy lub IZ dopuszcza możliwość zatwierdzenia wniosku o płatność z wyłączeniem wydatków
+          podlegających dalszej weryfikacji.</li>
+      </ol>
+    </li>
     <li>W przypadku stwierdzenia błędów w złożonym wniosku o płatność, IZ wzywa Beneficjenta do poprawienia lub
       uzupełnienia wniosku lub złożenia dodatkowych wyjaśnień w wyznaczonym terminie<sup>36</sup> oraz umożliwia
       beneficjentowi wyrażenie zgody na
@@ -1040,168 +1116,162 @@
       zgodnie z ust.2 niniejszego paragrafu, w przeciwnym wypadku mają zastosowanie zapisy § 15 niniejszej umowy.</li>
     <li>Beneficjent zobowiązuje się ująć każdy wydatek kwalifikowalny we wniosku o płatność przekazywanym do IZ w
       terminie do 3 miesięcy od dnia jego poniesienia.<sup>38</sup></li>
-    </ol>
+  </ol>
+
+
+
+
+
+
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <div style="text-align: justify;">
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 13.</div>
+    </div>
   </div>
 
-  <div style="text-align: justify;"></div>
+
+  <ol>
+    <li>Beneficjent ma obowiązek ujawniania wszelkich dochodów, które powstają w związku z realizacją projektu.</li>
+    <li>Dochody wygenerowane podczas realizacji projektu, które nie zostały wzięte pod uwagę w czasie jego
+      zatwierdzania, wykazuje się nie później niż w momencie złożenia wniosku o płatność końcową. Dochody te
+      pomniejszają wydatki kwalifikowalne projektu, z zastrzeżeniem sytuacji, o której mowa w ust 3.</li>
+    <li>W przypadku, gdy dochód związany z projektem został osiągnięty przy współudziale kosztów ponoszonych poza
+      projektem i możliwe jest określenie udziału kosztów realizacji projektu w osiągnięciu tego dochodu, wydatki
+      kwalifikowalne zostaną pomniejszone o ten udział.</li>
+  </ol>
+
+
+
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style="text-align: justify;">
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <div style="text-align: justify;">
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 13.</div>
-      </div>
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 14.</div>
     </div>
+  </div>
+
+  <ol>
+    <li>IZ może zawiesić wypłacanie transz dofinansowania w przypadku:
+
+      <ol type="none">
+        <li>1) nieprawidłowej realizacji projektu, w szczególności w przypadku opóźnienia w realizacji projektu przez
+          Beneficjenta, w tym opóźnień w składaniu wniosków o płatność w stosunku do terminów przewidzianych umową,
+        </li>
+        <li>2) utrudniania kontroli realizacji projektu,</li>
+        <li>3) dokumentowania realizacji projektu niezgodnie z postanowieniami niniejszej umowy,</li>
+        <li>4) na wniosek instytucji kontrolnych,</li>
+        <li>5) stwierdzenia nieprawidłowości w trakcie kontroli na miejscu realizacji projektu,</li>
+        <li>6) weryfikacji w siedzibie IZ dokumentacji dotyczącej udzielonych zamówień publicznych w związku z
+          uzasadnionym
+          podejrzeniem wystąpienia nieprawidłowości,</li>
+        <li>7) nieterminowego przedkładania dokumentów do IZ.</li>
+      </ol>
+    </li>
+    <li>Zawieszenie transz dofinansowania, o których mowa w ust. 1 niniejszego paragrafu, następuje wraz z pisemnym
+      poinformowaniem Beneficjenta o przyczynach zawieszenia.</li>
+    <li>Uruchomienie płatności następuje pod warunkiem usunięcia przez Beneficjenta przyczyn zawieszenia lub
+      przyjęcia
+      przez IZ wyjaśnień, w terminie określonym przez IZ.</li>
+  </ol>
 
 
-    <ol>
-      <li>Beneficjent ma obowiązek ujawniania wszelkich dochodów, które powstają w związku z realizacją projektu.</li>
-      <li>Dochody wygenerowane podczas realizacji projektu, które nie zostały wzięte pod uwagę w czasie jego
-        zatwierdzania, wykazuje się nie później niż w momencie złożenia wniosku o płatność końcową. Dochody te
-        pomniejszają wydatki kwalifikowalne projektu, z zastrzeżeniem sytuacji, o której mowa w ust 3.</li>
-      <li>W przypadku, gdy dochód związany z projektem został osiągnięty przy współudziale kosztów ponoszonych poza
-        projektem i możliwe jest określenie udziału kosztów realizacji projektu w osiągnięciu tego dochodu, wydatki
-        kwalifikowalne zostaną pomniejszone o ten udział.</li>
-    </ol>
-
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <div style="text-align: justify;">
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 14.</div>
-      </div>
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 15 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <div style="text-align: justify;">
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 15.</div>
     </div>
+  </div>
 
-    <ol>
-      <li>IZ może zawiesić wypłacanie transz dofinansowania w przypadku:
+  <ol>
+    <li>W przypadku stwierdzenia, iż na skutek działania lub zaniechania Beneficjenta doszło do nieprawidłowości lub
+      innego wydatkowania środków dofinansowania niezgodnie z zapisami umowy, IZ RPO WSL wszczyna procedurę
+      odzyskania
+      środków zgodnie z przepisami rozporządzenia ogólnego, ustawy wdrożeniowej oraz ustawy o finansach publicznych,
+      w
+      szczególności gdy na podstawie wniosków o płatność lub czynności kontrolnych uprawnionych organów zostanie
+      stwierdzone, że dofinansowanie jest:
 
-        <ol type="none">
-          <li>1) nieprawidłowej realizacji projektu, w szczególności w przypadku opóźnienia w realizacji projektu przez
-            Beneficjenta, w tym opóźnień w składaniu wniosków o płatność w stosunku do terminów przewidzianych umową,
-          </li>
-          <li>2) utrudniania kontroli realizacji projektu,</li>
-          <li>3) dokumentowania realizacji projektu niezgodnie z postanowieniami niniejszej umowy,</li>
-          <li>4) na wniosek instytucji kontrolnych,</li>
-          <li>5) stwierdzenia nieprawidłowości w trakcie kontroli na miejscu realizacji projektu,</li>
-          <li>6) weryfikacji w siedzibie IZ dokumentacji dotyczącej udzielonych zamówień publicznych w związku z
-            uzasadnionym
-            podejrzeniem wystąpienia nieprawidłowości,</li>
-          <li>7) nieterminowego przedkładania dokumentów do IZ.</li>
-        </ol>
-      </li>
-      <li>Zawieszenie transz dofinansowania, o których mowa w ust. 1 niniejszego paragrafu, następuje wraz z pisemnym
-        poinformowaniem Beneficjenta o przyczynach zawieszenia.</li>
-      <li>Uruchomienie płatności następuje pod warunkiem usunięcia przez Beneficjenta przyczyn zawieszenia lub
-        przyjęcia
-        przez IZ wyjaśnień, w terminie określonym przez IZ.</li>
-    </ol>
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 15 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <div style="text-align: justify;">
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 15.</div>
-      </div>
-    </div>
-
-
-    <ol>
-      <li>W przypadku stwierdzenia, iż na skutek działania lub zaniechania Beneficjenta doszło do nieprawidłowości lub
-        innego wydatkowania środków dofinansowania niezgodnie z zapisami umowy, IZ RPO WSL wszczyna procedurę
-        odzyskania
-        środków zgodnie z przepisami rozporządzenia ogólnego, ustawy wdrożeniowej oraz ustawy o finansach publicznych,
-        w
-        szczególności gdy na podstawie wniosków o płatność lub czynności kontrolnych uprawnionych organów zostanie
-        stwierdzone, że dofinansowanie jest:
-
-        <ol type="none">
-          <li>1) wykorzystane niezgodnie z przeznaczeniem,</li>
-          <li>2) wykorzystane z naruszeniem procedur, o których mowa w art. 184 UFP,</li>
-          <li>3) pobrane nienależnie lub w nadmiernej wysokości.</li>
-        </ol>
-      </li>
+      <ol type="none">
+        <li>1) wykorzystane niezgodnie z przeznaczeniem,</li>
+        <li>2) wykorzystane z naruszeniem procedur, o których mowa w art. 184 UFP,</li>
+        <li>3) pobrane nienależnie lub w nadmiernej wysokości.</li>
+      </ol>
       <div style="text-align: justify;">Beneficjent zobowiązuje się do zwrotu całości lub części dofinansowania wraz z
         odsetkami w wysokości określonej jak dla zaległości podatkowych.</div>
-      <div style="text-align: justify;">
-
-        <li>Odsetki, o których mowa w ust. 1 niniejszego paragrafu, naliczane są, zgodnie z art. 207 UFP, od dnia
-          przekazania Beneficjentowi ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia
-          obciążenia
-          rachunku płatniczego Beneficjenta kwotą zwrotu lub do dnia wpływu do IZ pisemnej zgody Beneficjenta na
-          pomniejszenie kolejnej płatności o kwotę do zwrotu. W przypadku zaangażowania na realizację projektu środków
-          własnych Beneficjenta, odsetki, o których mowa w ust. 1 niniejszego paragrafu, naliczane są od dnia
-          przekazania
-          Beneficjentowi następnej transzy dofinansowania, tj. tej przekazanej mu po dniu poniesienia wydatku.</li>
+    </li>
 
 
-        <li>W przypadku stwierdzenia przez IZ w zatwierdzonym wniosku o płatność okoliczności, o których mowa w ust 1
-          niniejszego paragrafu, Beneficjent, na pisemne wezwanie IZ, w terminie 14 dni kalendarzowych od dnia
-          doręczenia
-          wezwania do zwrotu:
-          <ol type="none">
-            <li style="text-align: justify;">1) dokonuje zwrotu, wraz z odsetkami w wysokości jak dla zaległości
-              podatkowych,
-              na
-              rachunki płatnicze wskazane przez IZ w tym wezwaniu,</li>
-            <li style="text-align: justify;">2) wyraża pisemną zgodę na pomniejszenie kolejnej płatności, o ile taka
-              możliwość
-              istnieje, o kwotę zwrotu wraz z odsetkami. Beneficjent zobowiązany jest do niezwłocznego zasilenia
-              rachunku
-              projektu
-              środkami własnymi w wysokości odpowiadającej kwocie potrąconych odsetek, jednak nie później niż w terminie
-              do 30
-              dni
-              kalendarzowych od dnia zakończenia okresu realizacji projektu. Zwrócone środki będą podlegały rozliczeniu
-              na
-              zasadzie dofinansowania.</li>
-          </ol>
-        </li>
-        <li>W przypadku stwierdzenia nieprawidłowości w złożonym, niezatwierdzonym wniosku o płatność, kwota
-          stwierdzonej
-          nieprawidłowości podlega zwrotowi:
-
-          <ol type="none">
-            <li>1) na rachunek projektu, nie później niż do dnia złożenia wniosku o płatność końcową jeżeli
-              Beneficjent
-              wyrazi
-              zgodę na pomniejszenie kwoty wydatków kwalifikowalnych, a w miejsce wydatków nieprawidłowych może
-              przedstawić
-              inne wydatki nieobarczone błędem (w trakcie realizacji projektu),</li>
-            <li>2) na rachunek IZ, jeżeli Beneficjent nie może przedstawić innych wydatków kwalifikowalnych
-              nieobarczonych
-              błędem
-              (np. okres realizacji projektu się zakończył),</li>
-            <li>3) na rachunek IZ wraz z odsetkami naliczonymi zgodnie z art. 207 UFP od dnia przekazania
-              Beneficjentowi
-              ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia obciążenia rachunku
-              płatniczego
-              Beneficjenta kwotą zwrotu, w przypadku braku zgody na pomniejszenie kwoty wydatków kwalifikowalnych.
-              Wezwanie
-              do
-              zwrotu środków IZ wystosowuje nie wcześniej niż na etapie zatwierdzenia wniosku o płatność, w którym
-              wykazano
-              wydatki niekwalifikowalne.</li>
-          </ol>
-        </li>
-        <li>W przypadku stwierdzenia nieprawidłowości, której zwrot następuje na rachunek IZ, Beneficjent dokonuje
-          opisu
-          przelewu zwracanych środków, o których mowa w ust. 3 pkt 1) i ust.4 pkt 3), zgodnie z zaleceniami IZ, o
-          których
-          mowa w § 10 ust. 18.</li>
-        <li>Beneficjent jest zobowiązany do przedłożenia wyciągu bankowego potwierdzającego dokonanie zwrotu środków,
-          o
-          których mowa w ust. 3 pkt 1) oraz w ust. 4 pkt 3 w terminie 14 dni kalendarzowych od otrzymania wezwania do
-          zwrotu należności.</li>
-        <li>Beneficjent jest zobowiązany do ponoszenia udokumentowanych kosztów podejmowanych wobec niego działań
-          windykacyjnych, o ile nie narusza to przepisów prawa powszechnego.</li>
-    </ol>
-  </div>
+    <li>Odsetki, o których mowa w ust. 1 niniejszego paragrafu, naliczane są, zgodnie z art. 207 UFP, od dnia
+      przekazania Beneficjentowi ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia
+      obciążenia
+      rachunku płatniczego Beneficjenta kwotą zwrotu lub do dnia wpływu do IZ pisemnej zgody Beneficjenta na
+      pomniejszenie kolejnej płatności o kwotę do zwrotu. W przypadku zaangażowania na realizację projektu środków
+      własnych Beneficjenta, odsetki, o których mowa w ust. 1 niniejszego paragrafu, naliczane są od dnia
+      przekazania
+      Beneficjentowi następnej transzy dofinansowania, tj. tej przekazanej mu po dniu poniesienia wydatku.</li>
 
 
+    <li>W przypadku stwierdzenia przez IZ w zatwierdzonym wniosku o płatność okoliczności, o których mowa w ust 1
+      niniejszego paragrafu, Beneficjent, na pisemne wezwanie IZ, w terminie 14 dni kalendarzowych od dnia
+      doręczenia
+      wezwania do zwrotu:
+      <ol type="none">
+        <li style="text-align: justify;">1) dokonuje zwrotu, wraz z odsetkami w wysokości jak dla zaległości
+          podatkowych,
+          na
+          rachunki płatnicze wskazane przez IZ w tym wezwaniu,</li>
+        <li style="text-align: justify;">2) wyraża pisemną zgodę na pomniejszenie kolejnej płatności, o ile taka
+          możliwość
+          istnieje, o kwotę zwrotu wraz z odsetkami. Beneficjent zobowiązany jest do niezwłocznego zasilenia
+          rachunku
+          projektu
+          środkami własnymi w wysokości odpowiadającej kwocie potrąconych odsetek, jednak nie później niż w terminie
+          do 30
+          dni
+          kalendarzowych od dnia zakończenia okresu realizacji projektu. Zwrócone środki będą podlegały rozliczeniu
+          na
+          zasadzie dofinansowania.</li>
+      </ol>
+    </li>
+    <li>W przypadku stwierdzenia nieprawidłowości w złożonym, niezatwierdzonym wniosku o płatność, kwota
+      stwierdzonej
+      nieprawidłowości podlega zwrotowi:
 
-
+      <ol type="none">
+        <li>1) na rachunek projektu, nie później niż do dnia złożenia wniosku o płatność końcową jeżeli
+          Beneficjent
+          wyrazi
+          zgodę na pomniejszenie kwoty wydatków kwalifikowalnych, a w miejsce wydatków nieprawidłowych może
+          przedstawić
+          inne wydatki nieobarczone błędem (w trakcie realizacji projektu),</li>
+        <li>2) na rachunek IZ, jeżeli Beneficjent nie może przedstawić innych wydatków kwalifikowalnych
+          nieobarczonych
+          błędem
+          (np. okres realizacji projektu się zakończył),</li>
+        <li>3) na rachunek IZ wraz z odsetkami naliczonymi zgodnie z art. 207 UFP od dnia przekazania
+          Beneficjentowi
+          ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia obciążenia rachunku
+          płatniczego
+          Beneficjenta kwotą zwrotu, w przypadku braku zgody na pomniejszenie kwoty wydatków kwalifikowalnych.
+          Wezwanie
+          do
+          zwrotu środków IZ wystosowuje nie wcześniej niż na etapie zatwierdzenia wniosku o płatność, w którym
+          wykazano
+          wydatki niekwalifikowalne.</li>
+      </ol>
+    </li>
+    <li>W przypadku stwierdzenia nieprawidłowości, której zwrot następuje na rachunek IZ, Beneficjent dokonuje
+      opisu
+      przelewu zwracanych środków, o których mowa w ust. 3 pkt 1) i ust.4 pkt 3), zgodnie z zaleceniami IZ, o
+      których
+      mowa w § 10 ust. 18.</li>
+    <li>Beneficjent jest zobowiązany do przedłożenia wyciągu bankowego potwierdzającego dokonanie zwrotu środków,
+      o
+      których mowa w ust. 3 pkt 1) oraz w ust. 4 pkt 3 w terminie 14 dni kalendarzowych od otrzymania wezwania do
+      zwrotu należności.</li>
+    <li>Beneficjent jest zobowiązany do ponoszenia udokumentowanych kosztów podejmowanych wobec niego działań
+      windykacyjnych, o ile nie narusza to przepisów prawa powszechnego.</li>
+  </ol>
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 16 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style="text-align: justify;">
