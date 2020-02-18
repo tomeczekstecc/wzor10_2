@@ -1,0 +1,30 @@
+<table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: text-top;">1) </td>
+      <td style="padding-left: 5px;">płatność ze środków europejskich w kwocie
+        <strong>{Funkcje::formatLiczba($wnd_wybrane.wklad_ue)} PLN
+          (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_ue)})</strong>, co stanowi
+        <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_ue)} %</strong> całkowitych wydatków kwalifikowalnych
+        Projektu;
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: text-top;">2) </td>
+      <td style="padding-left: 5px;"> {if $wnd_wybrane.wklad_dc !='0'}<span>
+          dotację celową z budżetu krajowego w kwocie <strong>{Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)} PLN
+            (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)})</strong>, co stanowi
+          <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_dc)} %</strong> całkowitych wydatków kwalifikowalnych
+          Projektu.<sup>8</sup>
+        </span>{else}<span style="text-decoration: line-through">
+          dotację celową z budżetu krajowego w kwocie <strong>........ PLN (słownie:.......)</strong>, co stanowi
+          <strong>........ %</strong> całkowitych wydatków kwalifikowalnych
+          Projektu.</span><sup>8</sup>
+        {/if}</td>
+    </tr>
+
+    </tr>
+  </tbody>
+
+
+</table>

@@ -336,46 +336,53 @@
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style=" margin-top: 15px; text-align: center;"><strong> Przedmiot umowy</strong></div>
-
-  <div style="text-align: center;">
-    <div style="text-align: center;">§ 2.</div>
+  <div style="text-align: justify;">
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 2.</div>
+    </div>
   </div>
-
-  <ol>
+  <ol style="list-style-type: none;">
     <li>Na warunkach określonych w niniejszej umowie, IZ przyznaje Beneficjentowi dofinansowanie na realizację
       Projektu w łącznej kwocie nieprzekraczającej <strong>{Funkcje::formatLiczba($wnd_wybrane.wnioskowane_dof)} PLN
         (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wnioskowane_dof)})</strong> i stanowiącej nie więcej niż
       <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_dof)} %</strong> całkowitych wydatków kwalifikowalnych
-      Projektu, w tym:
+      Projektu, w tym:</li>
+  </ol>
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">płatność ze środków europejskich w kwocie
-              <strong>{Funkcje::formatLiczba($wnd_wybrane.wklad_ue)} PLN
-                (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_ue)})</strong>, co stanowi
-              <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_ue)} %</strong> całkowitych wydatków kwalifikowalnych
-              Projektu;
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;"> {if $wnd_wybrane.wklad_dc !='0'}<span>
-                dotację celową z budżetu krajowego w kwocie <strong>{Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)} PLN
-                  (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)})</strong>, co stanowi
-                <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_dc)} %</strong> całkowitych wydatków kwalifikowalnych
-                Projektu.<sup>8</sup>
-              </span>{else}<span style="text-decoration: line-through">
-                dotację celową z budżetu krajowego w kwocie <strong>........ PLN (słownie:.......)</strong>, co stanowi
-                <strong>........ %</strong> całkowitych wydatków kwalifikowalnych
-                Projektu.</span><sup>8</sup>
-              {/if}</td>
-          </tr>
-        </tbody>
-      </table>
-    </li>
 
+
+
+  <table style="margin-left: 45px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+    <tbody>
+      <tr>
+        <td style="vertical-align: text-top;">1) </td>
+        <td style="padding-left: 5px;">płatność ze środków europejskich w kwocie
+          <strong>{Funkcje::formatLiczba($wnd_wybrane.wklad_ue)} PLN
+            (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_ue)})</strong>, co stanowi
+          <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_ue)} %</strong> całkowitych wydatków kwalifikowalnych
+          Projektu;
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align: text-top;">2) </td>
+        <td style="padding-left: 5px;"> {if $wnd_wybrane.wklad_dc !='0'}<span>
+            dotację celową z budżetu krajowego w kwocie <strong>{Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)} PLN
+              (słownie: {Funkcje::liczbaSlownie($wnd_wybrane.wklad_dc)})</strong>, co stanowi
+            <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_dc)} %</strong> całkowitych wydatków kwalifikowalnych
+            Projektu.<sup>8</sup>
+          </span>{else}<span style="text-decoration: line-through">
+            dotację celową z budżetu krajowego w kwocie <strong>........ PLN (słownie:.......)</strong>, co stanowi
+            <strong>........ %</strong> całkowitych wydatków kwalifikowalnych
+            Projektu.</span><sup>8</sup>
+          {/if}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <ol start="2">
     <li>Beneficjent zobowiązuje się do rozliczenia każdego wydatku w ramach dofinansowania zgodnie z montażem
       finansowym
       wskazanym w ust 1.
@@ -385,7 +392,7 @@
         {Funkcje::liczbaSlownie($wnd_wybrane.wklad_wlasny)})</strong>, co stanowi
       <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_wklad_wlasny)} %</strong> wydatków kwalifikowalnych
       projektu.
-
+      </lili>
 
 
       <div style="text-align: justify;">W przypadku niewniesienia wkładu własnego w ww. kwocie, IZ może kwotę
@@ -396,7 +403,7 @@
         <strong>{Funkcje::formatLiczba($wnd_wybrane.poziom_wklad_wlasny)} %</strong> wydatków projektu jest
         niekwalifikowalny.<sup>9</sup> W projekcie nie ma możliwości
         wniesienia wkładu własnego w ramach kosztów pośrednich, o których mowa <br /> w § 5 ust. 1.<sup>10</sup></div>
-    </li>
+      <br style="text-align: justify;">
 
     <li>Beneficjent zobowiązuje się do rozliczenia projektu, zgodnie z montażem finansowym przedstawionym w ust. 1
       niniejszego paragrafu. Montaż finansowy, o którym mowa w zdaniu pierwszym, odnosi się do poniesionych w ramach
@@ -478,9 +485,11 @@
       projektu.</li>
   </ol>
 
-
-
+  <div style="text-align: justify;"></div>
   <div style="text-align: center;"><strong>Oświadczenia</strong></div>
+
+
+
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style="text-align: center;">
@@ -542,28 +551,17 @@
     <li>Beneficjent zobowiązany jest stosować zamieszczone na stronie internetowej <span><a
           href="https://rpo.slaskie.pl/dokument/wzory_formularzy_i_dokumentow_niezbednych_do_realizacji_projektu_efs_082418">https://rpo.slaskie.pl/dokument/wzory_formularzy_i_dokumentow_niezbednych_do_realizacji_projektu_efs_082418</a></span>
       aktualnie obowiązujące wzory formularzy i dokumentów niezbędnych do realizacji projektu oraz instrukcje
-      dotyczące sposobu ich wypełniania, w tym w szczególności:
+      dotyczące sposobu ich wypełniania, w tym w szczególności:</li>
 
 
-
-    <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-      <tbody>
-        <tr>
-          <td style="vertical-align: text-top;">1) </td>
-          <td style="padding-left: 5px;">Formularz przekazywania informacji,
-          </td>
-        </tr>
-
-        <tr>
-          <td style="vertical-align: text-top;">2) </td>
-          <td style="padding-left: 5px;">Wymagania dotyczące wyodrębnionej ewidencji księgowej.
-          </td>
-        </tr>
-
-
-      </tbody>
-    </table></li>
+    <ol type="none" style="margin-top: 0;">
+      <li>
+        <div>1) Formularz przekazywania informacji,</div>
+        <div>2) Wymagania dotyczące wyodrębnionej ewidencji księgowej.</div>
+      </li>
+    </ol>
   </ol>
+
 
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -598,8 +596,9 @@
   </div>
 
 
-
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 6 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
 
   {if $stawki_jednostkowe == null}
   <div style="text-align: justify;">
@@ -1079,8 +1078,11 @@
 
   <ol>
     <li>Strony ustalają następujące warunki przekazania transzy dofinansowania, z uwzględnieniem ust. 2-6:
-      <table
-        style="margin-top: -30px; margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+
+
+
+
+      <table style="margin-left: 45px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
         <tbody>
           <tr>
             <td style="vertical-align: text-top;">1) </td>
@@ -1110,76 +1112,40 @@
       </table>
     </li>
 
-
-
-    <li>Przekazanie transzy środków na dofinansowanie projektu, o której mowa w ust. 1, może
-      nastąpić albo po
+    <li>Przekazanie transzy środków na dofinansowanie projektu, o której mowa w ust. 1, może nastąpić albo po
       zatwierdzeniu wniosku o płatność (w przypadku gdy wniosek o płatność jest prawidłowy) albo po odesłaniu
       Beneficjentowi wniosku do poprawy (w przypadku gdy wniosek o płatność wymaga dalszych korekt), przy spełnieniu
       warunków, o których mowa w ust. 1 pkt 2).</li>
-    <li> Nie jest możliwe przekazanie kolejnej transzy dofinansowania w przypadku
-      braku zatwierdzenia wniosku o
+    <li>Nie jest możliwe przekazanie kolejnej transzy dofinansowania w przypadku braku zatwierdzenia wniosku o
       płatność
       za poprzedni okres rozliczeniowy:
 
-
-
-      <table style="margin: 0; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">w chwili zatwierdzania do wypłaty kolejnej transzy dofinansowania IZ jest
-              zobowiązana do
-              uwzględnienia
-              środków
-              faktycznie przekazanych Beneficjentowi na dzień zatwierdzenia wniosku o płatność, w tym również po
-              złożeniu
-              przez Beneficjenta wniosku o płatność, co do których IZ dokonała zlecenia płatności,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">limit 70% dofinansowania rozpatrywany jest kumulatywnie. IZ dokonuje
-              porównania rozliczonych
-              dotychczas w
-              ramach projektu wydatków, biorąc pod uwagę wydatki w zatwierdzonych uprzednio wnioskach o płatność,
-              pomniejszonych o stwierdzone wydatki niekwalifikowalne/nieprawidłowości.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <ol type="none">
+        <li>1) w chwili zatwierdzania do wypłaty kolejnej transzy dofinansowania IZ jest zobowiązana do
+          uwzględnienia
+          środków
+          faktycznie przekazanych Beneficjentowi na dzień zatwierdzenia wniosku o płatność, w tym również po
+          złożeniu
+          przez Beneficjenta wniosku o płatność, co do których IZ dokonała zlecenia płatności,</li>
+        <li>2) limit 70% dofinansowania rozpatrywany jest kumulatywnie. IZ dokonuje porównania rozliczonych
+          dotychczas w
+          ramach projektu wydatków, biorąc pod uwagę wydatki w zatwierdzonych uprzednio wnioskach o płatność,
+          pomniejszonych o stwierdzone wydatki niekwalifikowalne/nieprawidłowości.</li>
+      </ol>
     </li>
-
-
-
     <li>Transze dofinansowania wypłacane są:
 
-
-
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">w przypadku środków, o których mowa w § 2 ust. 1 pkt 1), przez Bank
-              Gospodarstwa Krajowego, na
-              podstawie
-              zlecenia płatności wystawionego pod warunkiem dostępności środków w ramach upoważnienia, wydanego na
-              podstawie
-              art. 188 ust. 2 UFP do wydawania zgody na dokonywanie płatności,
-            </td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">w przypadku środków, o których mowa w § 2 ust. 1 pkt 2), pod warunkiem
-              dostępności środków na
-              rachunku
-              IZ.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
+      <ol type="none">
+        <li>1) w przypadku środków, o których mowa w § 2 ust. 1 pkt 1), przez Bank Gospodarstwa Krajowego, na
+          podstawie
+          zlecenia płatności wystawionego pod warunkiem dostępności środków w ramach upoważnienia, wydanego na
+          podstawie
+          art. 188 ust. 2 UFP do wydawania zgody na dokonywanie płatności,</li>
+        <li>2) w przypadku środków, o których mowa w § 2 ust. 1 pkt 2), pod warunkiem dostępności środków na
+          rachunku
+          IZ.
+        </li>
+      </ol>
     </li>
     <li>Beneficjent przedkłada wniosek o płatność w wersji elektronicznej za pośrednictwem SEKAP/ePUAP sporządzony
       przy użyciu LSI udostępnionego Beneficjentowi przez IZ zgodnie z zamieszczoną na stronie internetowej
@@ -1192,25 +1158,11 @@
       zastosowania § 34 ust. 2 pkt 4) i 5).</li>
 
     <li>Beneficjent zobowiązuje się do przedkładania wraz z wnioskiem o płatność, o którym mowa w § 12:
-
-
-
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">informacji o wszystkich uczestnikach projektu, stosując regulację wynikającą
-              z RODO;
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">dokumentów, o których mowa w § 6 ust. 2).<sup>31</sup>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
+      <ol type="none">
+        <li>1) informacji o wszystkich uczestnikach projektu, stosując regulację wynikającą z RODO;</li>
+        <li>2) dokumentów, o których mowa w § 6 ust. 2).<sup>31</sup>
+        </li>
+      </ol>
       <div style="text-align: justify;">Na wezwanie IZ Beneficjent przedkłada dokumenty związane z realizacją
         projektu,
         zgodnie z § 29 ust. 4 w tym w szczególności: dokumenty wykazane we wniosku o płatność, wyciągi z rachunku
@@ -1231,6 +1183,8 @@
 
 
 
+
+
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 12 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <div style="text-align: justify;">
     <div style="text-align: center;">
@@ -1248,27 +1202,14 @@
         pierwszego wniosku o płatność wynosi:</div>
 
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1)</td>
-            <td style="padding-left: 5px;">10 dni roboczych od dnia jej podpisania;
-            </td>
-          </tr>
 
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">15 dni roboczych od dnia jej podpisania w przypadku projektów o wartości
-              przekraczającej limit, o
-              którym
-              mowa
-              w § 18 ust. 4.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-
+      <ol type="none">
+        <li>1) 10 dni roboczych od dnia jej podpisania;</li>
+        <li>2) 15 dni roboczych od dnia jej podpisania w przypadku projektów o wartości przekraczającej limit, o
+          którym
+          mowa
+          w § 18 ust. 4.</li>
+      </ol>
     </li>
     <li>Beneficjent składa drugi i kolejne wnioski o płatność zgodnie z harmonogramem płatności, o którym mowa w §
       10
@@ -1294,55 +1235,32 @@
       roboczych od daty jego otrzymania, przy czym termin ten dotyczy każdej złożonej przez Beneficjenta wersji
       wniosku o płatność<sup>33</sup>. W przypadku gdy:
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">w ramach projektu jest dokonywana kontrola i złożony został końcowy wniosek o
-              płatność, termin jego
-              weryfikacji ulega przerwaniu i biegnie od nowa od dnia przekazania do IZ informacji o
-              wykonaniu/zaniechaniu
-              wykonania zaleceń pokontrolnych, chyba że wyniki kontroli zawarte w Informacji Pokontrolnej nie wskazują
-              wystąpienia wydatków niekwalifikowalnych/nieprawidłowości w projekcie lub nie mają wpływu na rozliczenie
-              końcowe
-              projektu;
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">dokonywana jest przez IZ kontrola doraźna na projekcie, termin weryfikacji
-              każdego złożonego przez
-              Beneficjenta wniosku o płatność ulega przerwaniu i biegnie od nowa, chyba że IZ ma możliwość wyłączenia z
-              wniosku o płatność zakwestionowanych wydatków i zatwierdzenia pozostałych wydatków wykazanych w danym
-              wniosku
-              o
-              płatność;<sup>34</sup>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">3) </td>
-            <td style="padding-left: 5px;">dokonywana jest kontrola planowa i złożony został wniosek o
-              płatność<sup>35</sup>, dokonywana jest
-              jego
-              weryfikacja z możliwością
-              wyłączenia
-              wydatków niekwalifikowalnych/nieprawidłowości w projekcie stwierdzonych na etapie kontroli;
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">4) </td>
-            <td style="padding-left: 5px;">w siedzibie IZ dokonywana jest weryfikacja dokumentacji źródłowej dotyczącej
-              rozliczanych wydatków w
-              złożonym
-              wniosku o płatność, termin weryfikacji wniosku o płatność może ulec wydłużeniu z uwagi na skomplikowany
-              charakter sprawy lub IZ dopuszcza możliwość zatwierdzenia wniosku o płatność z wyłączeniem wydatków
-              podlegających dalszej weryfikacji.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <ol type="none">
+        <li>1) w ramach projektu jest dokonywana kontrola i złożony został końcowy wniosek o płatność, termin jego
+          weryfikacji ulega przerwaniu i biegnie od nowa od dnia przekazania do IZ informacji o
+          wykonaniu/zaniechaniu
+          wykonania zaleceń pokontrolnych, chyba że wyniki kontroli zawarte w Informacji Pokontrolnej nie wskazują
+          wystąpienia wydatków niekwalifikowalnych/nieprawidłowości w projekcie lub nie mają wpływu na rozliczenie
+          końcowe
+          projektu;</li>
+        <li>2) dokonywana jest przez IZ kontrola doraźna na projekcie, termin weryfikacji każdego złożonego przez
+          Beneficjenta wniosku o płatność ulega przerwaniu i biegnie od nowa, chyba że IZ ma możliwość wyłączenia z
+          wniosku o płatność zakwestionowanych wydatków i zatwierdzenia pozostałych wydatków wykazanych w danym
+          wniosku
+          o
+          płatność;<sup>34</sup></li>
+        <li>3) dokonywana jest kontrola planowa i złożony został wniosek o płatność<sup>35</sup>, dokonywana jest
+          jego
+          weryfikacja z możliwością
+          wyłączenia
+          wydatków niekwalifikowalnych/nieprawidłowości w projekcie stwierdzonych na etapie kontroli;</li>
+        <li>4) w siedzibie IZ dokonywana jest weryfikacja dokumentacji źródłowej dotyczącej rozliczanych wydatków w
+          złożonym
+          wniosku o płatność, termin weryfikacji wniosku o płatność może ulec wydłużeniu z uwagi na skomplikowany
+          charakter sprawy lub IZ dopuszcza możliwość zatwierdzenia wniosku o płatność z wyłączeniem wydatków
+          podlegających dalszej weryfikacji.</li>
+      </ol>
     </li>
-
     <li>W przypadku stwierdzenia błędów w złożonym wniosku o płatność, IZ wzywa Beneficjenta do poprawienia lub
       uzupełnienia wniosku lub złożenia dodatkowych wyjaśnień w wyznaczonym terminie<sup>36</sup> oraz umożliwia
       Beneficjentowi wyrażenie zgody na
@@ -1366,42 +1284,19 @@
       ust. 3 niniejszego paragrafu, informację o wynikach weryfikacji wniosku o płatność, przy czym informacja o
       zatwierdzeniu całości lub części wniosku o płatność powinna zawierać w szczególności:
 
-
-
-
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">kwotę wydatków, które zostały uznane za niekwalifikowalne wraz z
-              uzasadnieniem;
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">zatwierdzoną kwotę rozliczanego dofinansowania w podziale na środki, o
-              których mowa w § 2 ust. 1 pkt 1)
-              i
-              2)
-              oraz wkładu własnego<sup>37</sup> wynikającą
-              z pomniejszenia kwoty wydatków rozliczanych we wniosku o płatność o wydatki niekwalifikowalne, o których
-              mowa w
-              pkt 1);
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">3) </td>
-            <td style="padding-left: 5px;">kwotę stwierdzonych wydatków niekwalifikowalnych/nieprawidłowości, które nie
-              stanowią podstawy do
-              wypłaty
-              kolejnej transzy dofinansowania zgodnie z § 11.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-
-
+      <ol type="none">
+        <li>1) kwotę wydatków, które zostały uznane za niekwalifikowalne wraz z uzasadnieniem;</li>
+        <li>2) zatwierdzoną kwotę rozliczanego dofinansowania w podziale na środki, o których mowa w § 2 ust. 1 pkt 1)
+          i
+          2)
+          oraz wkładu własnego<sup>37</sup> wynikającą
+          z pomniejszenia kwoty wydatków rozliczanych we wniosku o płatność o wydatki niekwalifikowalne, o których
+          mowa w
+          pkt 1);</li>
+        <li>3) kwotę stwierdzonych wydatków niekwalifikowalnych/nieprawidłowości, które nie stanowią podstawy do
+          wypłaty
+          kolejnej transzy dofinansowania zgodnie z § 11.</li>
+      </ol>
     </li>
     <li>Beneficjent zobowiązany jest do rozliczenia 100% środków pozostałych do rozliczenia w końcowym wniosku o
       płatność.
@@ -1417,10 +1312,14 @@
 
 
 
-  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-  <div style="text-align: center;">
-    <div style="text-align: center;">§ 13.</div>
+
+
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <div style="text-align: justify;">
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 13.</div>
+    </div>
   </div>
 
 
@@ -1446,54 +1345,19 @@
   <ol>
     <li>IZ może zawiesić wypłacanie transz dofinansowania w przypadku:
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">nieprawidłowej realizacji projektu, w szczególności w przypadku opóźnienia w
-              realizacji projektu przez
-              Beneficjenta, w tym opóźnień w składaniu wniosków o płatność w stosunku do terminów przewidzianych umową,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">utrudniania kontroli realizacji projektu,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">,3) </td>
-            <td style="padding-left: 5px;">dokumentowania realizacji projektu niezgodnie z postanowieniami niniejszej
-              umowy,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">4) </td>
-            <td style="padding-left: 5px;">na wniosek instytucji kontrolnych,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">5) </td>
-            <td style="padding-left: 5px;">stwierdzenia nieprawidłowości w trakcie kontroli na miejscu realizacji
-              projektu,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">6) </td>
-            <td style="padding-left: 5px;">weryfikacji w siedzibie IZ dokumentacji dotyczącej udzielonych zamówień
-              publicznych w związku z
-              uzasadnionym
-              podejrzeniem wystąpienia nieprawidłowości,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">7) </td>
-            <td style="padding-left: 5px;">nieterminowego przedkładania dokumentów do IZ.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-
+      <ol type="none">
+        <li>1) nieprawidłowej realizacji projektu, w szczególności w przypadku opóźnienia w realizacji projektu przez
+          Beneficjenta, w tym opóźnień w składaniu wniosków o płatność w stosunku do terminów przewidzianych umową,
+        </li>
+        <li>2) utrudniania kontroli realizacji projektu,</li>
+        <li>3) dokumentowania realizacji projektu niezgodnie z postanowieniami niniejszej umowy,</li>
+        <li>4) na wniosek instytucji kontrolnych,</li>
+        <li>5) stwierdzenia nieprawidłowości w trakcie kontroli na miejscu realizacji projektu,</li>
+        <li>6) weryfikacji w siedzibie IZ dokumentacji dotyczącej udzielonych zamówień publicznych w związku z
+          uzasadnionym
+          podejrzeniem wystąpienia nieprawidłowości,</li>
+        <li>7) nieterminowego przedkładania dokumentów do IZ.</li>
+      </ol>
     </li>
     <li>Zawieszenie transz dofinansowania, o których mowa w ust. 1 niniejszego paragrafu, następuje wraz z pisemnym
       poinformowaniem Beneficjenta o przyczynach zawieszenia.</li>
@@ -1519,27 +1383,11 @@
       szczególności gdy na podstawie wniosków o płatność lub czynności kontrolnych uprawnionych organów zostanie
       stwierdzone, że dofinansowanie jest:
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">wykorzystane niezgodnie z przeznaczeniem,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">wykorzystane z naruszeniem procedur, o których mowa w art. 184 UFP,
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">3) </td>
-            <td style="padding-left: 5px;">pobrane nienależnie lub w nadmiernej wysokości.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-
+      <ol type="none">
+        <li>1) wykorzystane niezgodnie z przeznaczeniem,</li>
+        <li>2) wykorzystane z naruszeniem procedur, o których mowa w art. 184 UFP,</li>
+        <li>3) pobrane nienależnie lub w nadmiernej wysokości.</li>
+      </ol>
       <div style="text-align: justify;">Beneficjent zobowiązuje się do zwrotu całości lub części dofinansowania wraz z
         odsetkami w wysokości określonej jak dla zaległości podatkowych.</div>
     </li>
@@ -1581,50 +1429,29 @@
       stwierdzonej
       nieprawidłowości podlega zwrotowi:
 
-
-
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">na rachunek projektu, nie później niż do dnia złożenia wniosku o płatność
-              końcową jeżeli
-              Beneficjent
-              wyrazi
-              zgodę na pomniejszenie kwoty wydatków kwalifikowalnych, a w miejsce wydatków nieprawidłowych może
-              przedstawić
-              inne wydatki nieobarczone błędem (w trakcie realizacji projektu),
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">na rachunek IZ, jeżeli Beneficjent nie może przedstawić innych wydatków
-              kwalifikowalnych
-              nieobarczonych
-              błędem
-              (np. okres realizacji projektu się zakończył),
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: text-top;">3) </td>
-            <td style="padding-left: 5px;">na rachunek IZ wraz z odsetkami naliczonymi zgodnie z art. 207 UFP od dnia
-              przekazania
-              Beneficjentowi
-              ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia obciążenia rachunku
-              płatniczego
-              Beneficjenta kwotą zwrotu, w przypadku braku zgody na pomniejszenie kwoty wydatków kwalifikowalnych.
-              Wezwanie
-              do
-              zwrotu środków IZ wystosowuje nie wcześniej niż na etapie zatwierdzenia wniosku o płatność, w którym
-              wykazano
-              wydatki niekwalifikowalne.
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
+      <ol type="none">
+        <li>1) na rachunek projektu, nie później niż do dnia złożenia wniosku o płatność końcową jeżeli
+          Beneficjent
+          wyrazi
+          zgodę na pomniejszenie kwoty wydatków kwalifikowalnych, a w miejsce wydatków nieprawidłowych może
+          przedstawić
+          inne wydatki nieobarczone błędem (w trakcie realizacji projektu),</li>
+        <li>2) na rachunek IZ, jeżeli Beneficjent nie może przedstawić innych wydatków kwalifikowalnych
+          nieobarczonych
+          błędem
+          (np. okres realizacji projektu się zakończył),</li>
+        <li>3) na rachunek IZ wraz z odsetkami naliczonymi zgodnie z art. 207 UFP od dnia przekazania
+          Beneficjentowi
+          ostatniej transzy przed poniesieniem wydatków niekwalifikowalnych do dnia obciążenia rachunku
+          płatniczego
+          Beneficjenta kwotą zwrotu, w przypadku braku zgody na pomniejszenie kwoty wydatków kwalifikowalnych.
+          Wezwanie
+          do
+          zwrotu środków IZ wystosowuje nie wcześniej niż na etapie zatwierdzenia wniosku o płatność, w którym
+          wykazano
+          wydatki niekwalifikowalne.</li>
+      </ol>
     </li>
-
     <li>W przypadku stwierdzenia nieprawidłowości, której zwrot następuje na rachunek IZ, Beneficjent dokonuje
       opisu
       przelewu zwracanych środków, o których mowa w ust. 3 pkt 1) i ust.4 pkt 3), zgodnie z zaleceniami IZ, o
@@ -1639,24 +1466,26 @@
   </ol>
 
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 16 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-  <div style="text-align: center;">
-    <div style="text-align: center;">§ 16.</div>
-  </div>
-
-
   <div style="text-align: justify;">
-
-    W przypadku stwierdzenia w projekcie nieprawidłowości, o których mowa w § 15 ust.
-    1,
-    po zatwierdzeniu wniosku Beneficjenta o płatność oraz w sytuacji, o której mowa w § 15 ust. 4 pkt 2) oraz pkt
-    3),
-    wartość projektu określona w aktualnym wniosku, o którym mowa w § 10 ust. 4, ulega odpowiedniemu pomniejszeniu o
-    kwotę podlegającą zwrotowi. Kwota przypadająca na stwierdzoną w projekcie nieprawidłowość nie może zostać
-    powtórnie
-    wykorzystana w ramach projektu. Zmiana, o której mowa w zdaniu pierwszym, nie wymaga formy aneksu do niniejszej
-
+    <div style="text-align: center;">
+      <div style="text-align: center;">§ 16.</div>
+    </div>
   </div>
+
+
+  <ol style="text-align: justify;">
+    <li>
+      W przypadku stwierdzenia w projekcie nieprawidłowości, o których mowa w § 15 ust.
+      1,
+      po zatwierdzeniu wniosku Beneficjenta o płatność oraz w sytuacji, o której mowa w § 15 ust. 4 pkt 2) oraz pkt
+      3),
+      wartość projektu określona w aktualnym wniosku, o którym mowa w § 10 ust. 4, ulega odpowiedniemu pomniejszeniu o
+      kwotę podlegającą zwrotowi. Kwota przypadająca na stwierdzoną w projekcie nieprawidłowość nie może zostać
+      powtórnie
+      wykorzystana w ramach projektu. Zmiana, o której mowa w zdaniu pierwszym, nie wymaga formy aneksu do niniejszej
+      umowy.
+    </li>
+  </ol>
 
 
 
@@ -1765,76 +1594,44 @@
   <ol>
     <li>Beneficjent zobowiązuje się do:
 
-      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-        <tbody>
-          <tr>
-            <td style="vertical-align: text-top;">1) </td>
-            <td style="padding-left: 5px;">niezwłocznego informowania IZ o problemach w realizacji projektu, w
-              szczególności o zamiarze zaprzestania jego realizacji;
-            </td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: text-top;">2) </td>
-            <td style="padding-left: 5px;">sporządzania i składania w systemie LSI harmonogramów udzielanych w projekcie
-              form wsparcia, w szczególności: szkoleń, kursów, staży, usług doradczych, poradnictwa, warsztatów,
-              seminariów, studiów wyższych i podyplomowych.
-              <div style="text-align: justify;">Harmonogram form wsparcia należy składać w terminie do ostatniego dnia
-                miesiąca poprzedzającego miesiąc, w którym udzielane będzie wsparcie.</div>
-              <div style="text-align: justify;">W przypadku istotnych zmian w zakresie udzielanego wsparcia (dotyczących
-                przede wszystkim daty i miejsca planowanej formy wsparcia) Beneficjent zobligowany jest do niezwłocznej
-                aktualizacji
-                harmonogramu. Przeprowadzenie przez IZ bezprzedmiotowej wizyty monitoringowej, zaplanowanej w oparciu o
-                nieaktualny
-                harmonogram może spowodować obciążenie Beneficjenta kosztami delegacji służbowej pracowników IZ;</div>
-              sed
-            </td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: text-top;">3) </td>
-            <td style="padding-left: 5px;">niezwłocznego informowania o każdej kontroli przeprowadzonej w zakresie
-              prawidłowości realizacji projektu, przez uprawnione podmioty inne niż IZ, Beneficjent jest zobowiązany
-              przekazywać IZ kopie informacji pokontrolnych oraz zaleceń pokontrolnych lub innych równoważnych
-              dokumentów sporządzonych przez instytucje kontrolujące, jeżeli wyniki kontroli dotyczą projektu, w
-              terminie 14 dni od dnia otrzymania tych dokumentów;<sup>41</sup>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: text-top;">4) </td>
-            <td style="padding-left: 5px;">przedstawiania na pisemne wezwanie IZ wszelkich informacji i wyjaśnień
-              związanych z realizacją projektu, w terminie określonym w wezwaniu w tym kopii dokumentów poświadczonych
-              „za zgodność z oryginałem” lub
-              odwzorowanych cyfrowo skanów dokumentów;
-            </td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: text-top;">5) </td>
-            <td style="padding-left: 5px;">współpracy z podmiotami zewnętrznymi, realizującymi badanie ewaluacyjne na
-              zlecenie IZ poprzez
-              udzielanie
-              każdorazowo na wniosek tych podmiotów dokumentów i informacji na temat realizacji projektu, niezbędnych do
-              przeprowadzenia badania ewaluacyjnego;</li>
-    </td>
-    </tr>
-
-    <tr>
-      <td style="vertical-align: text-top;">6) </td>
-      <td style="padding-left: 5px;">udostępnienia, na wniosek innych upoważnionych podmiotów kontrolujących, dokumentów
-        i informacji na
-        temat
-        realizacji projektu niezbędnych do przeprowadzenia kontroli/audytu.
-        sed
-      </td>
-    </tr>
-    </tbody>
-    </table>
+      <ol type="none">
+        <li>1) niezwłocznego informowania IZ o problemach w realizacji projektu, w szczególności o zamiarze
+          zaprzestania
+          jego
+          realizacji;</li>
+        <li>2) sporządzania i składania w systemie LSI harmonogramów udzielanych w projekcie form wsparcia, w
+          szczególności:
+          szkoleń, kursów, staży, usług doradczych, poradnictwa, warsztatów, seminariów, studiów wyższych i
+          podyplomowych.
+          <div style="text-align: justify;">Harmonogram form wsparcia należy składać w terminie do ostatniego dnia
+            miesiąca poprzedzającego miesiąc, w którym udzielane będzie wsparcie.</div>
+          <div style="text-align: justify;">W przypadku istotnych zmian w zakresie udzielanego wsparcia (dotyczących
+            przede wszystkim daty i miejsca planowanej formy wsparcia) Beneficjent zobligowany jest do niezwłocznej
+            aktualizacji
+            harmonogramu. Przeprowadzenie przez IZ bezprzedmiotowej wizyty monitoringowej, zaplanowanej w oparciu o
+            nieaktualny
+            harmonogram może spowodować obciążenie Beneficjenta kosztami delegacji służbowej pracowników IZ;</div>
+        </li>
+        <li>3) niezwłocznego informowania o każdej kontroli przeprowadzonej w zakresie prawidłowości realizacji
+          projektu,
+          przez uprawnione podmioty inne niż IZ, Beneficjent jest zobowiązany przekazywać IZ kopie informacji
+          pokontrolnych oraz zaleceń pokontrolnych lub innych równoważnych dokumentów sporządzonych przez instytucje
+          kontrolujące, jeżeli wyniki kontroli dotyczą projektu, w terminie 14 dni od dnia otrzymania tych
+          dokumentów;<sup>41</sup></li>
+        <li>4) przedstawiania na pisemne wezwanie IZ wszelkich informacji i wyjaśnień związanych z realizacją
+          projektu,
+          w
+          terminie określonym w wezwaniu w tym kopii dokumentów poświadczonych „za zgodność z oryginałem” lub
+          odwzorowanych cyfrowo skanów dokumentów;</li>
+        <li>5) współpracy z podmiotami zewnętrznymi, realizującymi badanie ewaluacyjne na zlecenie IZ poprzez
+          udzielanie
+          każdorazowo na wniosek tych podmiotów dokumentów i informacji na temat realizacji projektu, niezbędnych do
+          przeprowadzenia badania ewaluacyjnego;</li>
+        <li>6) udostępnienia, na wniosek innych upoważnionych podmiotów kontrolujących, dokumentów i informacji na
+          temat
+          realizacji projektu niezbędnych do przeprowadzenia kontroli/audytu.</li>
+      </ol>
     </li>
-
-
-
     <li>Przepisy ust. 1 niniejszego paragrafu stosuje się w okresie realizacji projektu, o którym mowa w § 7 ust. 1
       oraz w okresie wskazanym w § 22.</li>
   </ol>
@@ -2011,26 +1808,13 @@
       <li>Zobowiązuje się podmiot udzielający pomocy do wypełniania wszelkich obowiązków, jakie nakładają na niego
         przepisy prawa wspólnotowego i krajowego w zakresie pomocy publicznej i pomocy de minimis, w szczególności:
 
-
-        <table
-          style="text-decoration: line-through;margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-          <tbody>
-            <tr>
-              <td style="vertical-align: text-top;">1) </td>
-              <td style="padding-left: 5px;">sporządzania i przedstawiania Prezesowi Urzędu Ochrony Konkurencji i
-                Konsumentów sprawozdań o udzielonej pomocy publicznej, zgodnie z art. 32 ust. 1 ustawy z dnia 30 czerwca
-                2004 r. o postępowaniu w sprawach dotyczących pomocy publicznej,
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: text-top;">2) </td>
-              <td style="padding-left: 5px;">wydawania Beneficjentom pomocy zaświadczeń o pomocy de minimis.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-
+        <ol type="none">
+          <li>1) sporządzania i przedstawiania Prezesowi Urzędu Ochrony Konkurencji i Konsumentów sprawozdań o
+            udzielonej
+            pomocy publicznej, zgodnie z art. 32 ust. 1 ustawy z dnia 30 czerwca 2004 r. o postępowaniu w sprawach
+            dotyczących pomocy publicznej,</li>
+          <li>2) wydawania Beneficjentom pomocy zaświadczeń o pomocy de minimis.</li>
+        </ol>
       </li>
       <li>Jeżeli na etapie kontroli projektu lub weryfikacji wniosków o płatność zostanie stwierdzone, że pomoc
         publiczna/pomoc de minimis została przyznana niezgodnie z zasadami jej udzielania w wyniku niedopełnienia
@@ -2112,22 +1896,13 @@
       <li>Zobowiązuje się podmiot udzielający pomocy do wypełniania wszelkich obowiązków, jakie nakładają na niego
         przepisy prawa wspólnotowego i krajowego w zakresie pomocy publicznej i pomocy de minimis, w szczególności:
 
-        <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-          <tbody>
-            <tr>
-              <td style="vertical-align: text-top;">1) </td>
-              <td style="padding-left: 5px;">sporządzania i przedstawiania Prezesowi Urzędu Ochrony Konkurencji i
-                Konsumentów sprawozdań o udzielonej pomocy publicznej, zgodnie z art. 32 ust. 1 ustawy z dnia 30 czerwca
-                2004 r. o postępowaniu w sprawach dotyczących pomocy publicznej,
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: text-top;">2) </td>
-              <td style="padding-left: 5px;">wydawania Beneficjentom pomocy zaświadczeń o pomocy de minimis.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <ol type="none">
+          <li>1) sporządzania i przedstawiania Prezesowi Urzędu Ochrony Konkurencji i Konsumentów sprawozdań o
+            udzielonej
+            pomocy publicznej, zgodnie z art. 32 ust. 1 ustawy z dnia 30 czerwca 2004 r. o postępowaniu w sprawach
+            dotyczących pomocy publicznej,</li>
+          <li>2) wydawania Beneficjentom pomocy zaświadczeń o pomocy de minimis.</li>
+        </ol>
       </li>
       <li>Jeżeli na etapie kontroli projektu lub weryfikacji wniosków o płatność zostanie stwierdzone, że pomoc
         publiczna/pomoc de minimis została przyznana niezgodnie z zasadami jej udzielania w wyniku niedopełnienia
@@ -2228,47 +2003,27 @@
       <li>IZ stosuje regułę proporcjonalności na zakończenie projektu tj. przed zatwierdzeniem końcowego wniosku o
         płatność, zgodnie z którą:
 
-
-
-
-        <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-          <tbody>
-            <tr>
-              <td style="vertical-align: text-top;">1) </td>
-              <td style="padding-left: 5px;">na etapie rozliczenia końcowego wniosku o płatność kwalifikowalność
-                wydatków w projekcie oceniana
-                jest w
-                odniesieniu do stopnia osiągnięcia założeń merytorycznych określonych we wniosku o dofinansowanie
-                projektu, co
-                jest określane jako „reguła proporcjonalności”,
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">2) </td>
-              <td style="padding-left: 5px;">założenia merytoryczne projektu, o których mowa w pkt 1, mierzone są
-                poprzez wskaźniki produktu i
-                rezultatu
-                bezpośredniego, określone we wniosku o dofinansowanie,
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">3) </td>
-              <td style="padding-left: 5px;">w przypadku nieosiągnięcia celu projektu (wyrażonego wskaźnikami produktu
-                lub rezultatu w zależności od założeń wskazanych w zatwierdzonym wniosku) - IZ może uznać wszystkie lub
-                odpowiednią część wydatków dotychczas rozliczonych w ramach projektu za niekwalifikowalne. Wysokość
-                wydatków niekwalifikowalnych uzależniona jest od stopnia niezrealizowania celów projektu. Wydatki
-                niekwalifikowalne obejmują wydatki związane z tym zadaniem merytorycznym (zadaniami merytorycznymi),
-                którego założenia nie zostały osiągnięte i koszty pośrednie. Stopień nieosiągnięcia założeń projektu
-                określany jest przez IZ.
-              </td>
-            </tr>
-
-
-          </tbody>
-        </table>
-
+        <ol type="none">
+          <li>1) na etapie rozliczenia końcowego wniosku o płatność kwalifikowalność wydatków w projekcie oceniana
+            jest w
+            odniesieniu do stopnia osiągnięcia założeń merytorycznych określonych we wniosku o dofinansowanie
+            projektu, co
+            jest określane jako „reguła proporcjonalności”,</li>
+          <li>2) założenia merytoryczne projektu, o których mowa w pkt 1, mierzone są poprzez wskaźniki produktu i
+            rezultatu
+            bezpośredniego, określone we wniosku o dofinansowanie,</li>
+          <li>3) w przypadku nieosiągnięcia celu projektu (wyrażonego wskaźnikami produktu lub rezultatu w zależności
+            od
+            założeń wskazanych w zatwierdzonym wniosku) - IZ może uznać wszystkie lub odpowiednią część wydatków
+            dotychczas
+            rozliczonych w ramach projektu za niekwalifikowalne. Wysokość wydatków niekwalifikowalnych uzależniona
+            jest od
+            stopnia niezrealizowania celów projektu. Wydatki niekwalifikowalne obejmują wydatki związane z tym
+            zadaniem
+            merytorycznym (zadaniami merytorycznymi), którego założenia nie zostały osiągnięte i koszty pośrednie.
+            Stopień
+            nieosiągnięcia założeń projektu określany jest przez IZ.</li>
+        </ol>
       </li>
       <li>IZ może odstąpić od rozliczenia projektu zgodnie z regułą proporcjonalności lub obniżyć wysokość albo
         odstąpić
@@ -2313,6 +2068,9 @@
 
 
 
+
+
+  <div style="text-align: justify;"></div>
   <div style="text-align: center;"><strong>Zasady korzystania z Lokalnego Systemu Informatycznego</strong></div>
   <div style="text-align: justify;">
 
@@ -2331,87 +2089,42 @@
         projektu,
         których IZ RPO WSL wymaga, w szczególności:
 
-
-        <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-          <tbody>
-            <tr>
-              <td style="vertical-align: text-top;">1) </td>
-              <td style="padding-left: 5px;">składania wniosków o płatność i ich uzupełnień z wypełnioną częścią
-                sprawozdawczą z wykorzystaniem
-                LSI oraz ich podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, w
-                terminach i według
-                zasad określonych w § 12 niniejszej umowy;
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">2) </td>
-              <td style="padding-left: 5px;">na wezwanie IZ RPO WSL do aktualizacji dokumentów aplikacyjnych w wersji
-                elektronicznej z
-                wykorzystaniem
-                LSI
-                oraz ich podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, w terminach i
-                zakresach określonych przez IZ;
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">3) </td>
-              <td style="padding-left: 5px;">do niezwłocznej aktualizacji harmonogramu płatności w wersji elektronicznej
-                z wykorzystaniem LSI oraz
-                ich
-                podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, zgodnie z § 10 ust. 9
-                niniejszej umowy;
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">4) </td>
-              <td style="padding-left: 5px;">do niezwłocznej aktualizacji informacji o postępowaniach/zamówieniach w
-                projekcie z wykorzystaniem
-                LSI w
-                module rejestr postępowań/zamówień, zgodnie z instrukcjami aktualnymi na moment aktualizacji informacji
-                o
-                zamówieniach/postępowaniach;<sup>49</sup>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">5) </td>
-              <td style="padding-left: 5px;">w przypadku niedostarczenia dokumentów wskazanych w pkt 1-4 lub w przypadku
-                stwierdzenia braków lub
-                błędów w
-                tych dokumentach Beneficjent może zostać zobowiązany do ich poprawy lub uzupełnienia w terminie i
-                zakresie
-                wyznaczonym przez IZ RPO WSL;
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">6) </td>
-              <td style="padding-left: 5px;">do wprowadzania do systemu informatycznego LSI danych w zakresie
-                angażowania personelu projektu zgodnie z Wytycznymi
-                chyba że z przyczyn awarii lub unieruchomienia systemu nie jest to możliwe. W takim przypadku
-                Beneficjent zobowiązuje
-                się do niezwłocznego uzupełnienia danych w LSI po ustaniu awarii lub uruchomieniu systemu;
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">7) </td>
-              <td style="padding-left: 5px;">do wprowadzania do systemu informatycznego LSI danych w zakresie modułu
-                PEFS, chyba że z powodu awarii lub
-                unieruchomienia systemu nie jest to możliwe. W takim przypadku Beneficjent zobowiązuje się do
-                niezwłocznego uzupełnienia
-                danych w LSI po ustaniu awarii lub uruchomieniu systemu.
-              </td>
-            </tr>
-
-
-          </tbody>
-        </table>
-
-
+        <ol type="none">
+          <li>1) składania wniosków o płatność i ich uzupełnień z wypełnioną częścią sprawozdawczą z wykorzystaniem
+            LSI
+            oraz
+            ich podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, w terminach i według
+            zasad
+            określonych w § 12 niniejszej umowy;</li>
+          <li>2) na wezwanie IZ RPO WSL do aktualizacji dokumentów aplikacyjnych w wersji elektronicznej z
+            wykorzystaniem
+            LSI
+            oraz ich podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, w terminach i
+            zakresach określonych przez IZ;</li>
+          <li>3) do niezwłocznej aktualizacji harmonogramu płatności w wersji elektronicznej z wykorzystaniem LSI oraz
+            ich
+            podpisywania i przesyłania z wykorzystaniem platform elektronicznych SEKAP/ePUAP, zgodnie z § 10 ust. 9
+            niniejszej umowy;</li>
+          <li>4) do niezwłocznej aktualizacji informacji o postępowaniach/zamówieniach w projekcie z wykorzystaniem
+            LSI w
+            module rejestr postępowań/zamówień, zgodnie z instrukcjami aktualnymi na moment aktualizacji informacji o
+            zamówieniach/postępowaniach;<sup>49</sup></li>
+          <li>5) w przypadku niedostarczenia dokumentów wskazanych w pkt 1-4 lub w przypadku stwierdzenia braków lub
+            błędów w
+            tych dokumentach Beneficjent może zostać zobowiązany do ich poprawy lub uzupełnienia w terminie i zakresie
+            wyznaczonym przez IZ RPO WSL;</li>
+          <li>6) do wprowadzania do systemu informatycznego LSI danych w zakresie angażowania personelu projektu
+            zgodnie z
+            Wytycznymi chyba że z przyczyn awarii lub unieruchomienia systemu nie jest to możliwe. W takim przypadku
+            Beneficjent zobowiązuje się do niezwłocznego uzupełnienia danych w LSI po ustaniu awarii lub uruchomieniu
+            systemu;</li>
+          <li>7) do wprowadzania do systemu informatycznego LSI danych w zakresie modułu PEFS, chyba że z powodu
+            awarii
+            lub
+            unieruchomienia systemu nie jest to możliwe. W takim przypadku Beneficjent zobowiązuje się do
+            niezwłocznego
+            uzupełnienia danych w LSI po ustaniu awarii lub uruchomieniu systemu.</li>
+        </ol>
 
       </li>
       <li>Dokumenty dostarczane z wykorzystaniem komunikacji elektronicznej, są opatrzone bezpiecznym podpisem
@@ -2434,32 +2147,14 @@
         wezwanie
         IZ RPO WSL jest zobowiązany do dostarczenia dokumentów w innej formie, w szczególności:
 
-
-
-        <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-          <tbody>
-            <tr>
-              <td style="vertical-align: text-top;">1) </td>
-              <td style="padding-left: 5px;">załączników do wniosku o płatność przekraczających 50 stron A4,
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">2) </td>
-              <td style="padding-left: 5px;">dokumentów, które nie zostały zapisane w ogólnodostępnym formacie danych -
-                zgodnie z krajowymi ramami interoperacyjności,<sup>50</sup>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="vertical-align: text-top;">3) </td>
-              <td style="padding-left: 5px;">dla platform elektronicznych SEKAP/ePUAP - plików i dokumentów
-                elektronicznych, które łącznie przekraczają dopuszczalny poziom umożliwiający wysłanie dokumentu
-                elektronicznego.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <ol type="none">
+          <li>1) załączników do wniosku o płatność przekraczających 50 stron A4,</li>
+          <li>2) dokumentów, które nie zostały zapisane w ogólnodostępnym formacie danych - zgodnie z krajowymi ramami
+            interoperacyjności,<sup>50</sup></li>
+          <li>3) dla platform elektronicznych SEKAP/ePUAP - plików i dokumentów elektronicznych, które łącznie
+            przekraczają
+            dopuszczalny poziom umożliwiający wysłanie dokumentu elektronicznego.</li>
+        </ol>
       </li>
 
       <li>Jeśli weryfikacja autentyczności pochodzenia, integralności treści i czytelności dokumentów dostarczonych
@@ -2484,16 +2179,21 @@
 
 
 
+
+
+  <div style="text-align: justify;"></div>
+  <div style="text-align: justify;"></div>
   <div style="text-align: center;"><strong>Powierzenie przetwarzania danych osobowych</strong></div>
   <div style="text-align: justify;">
 
 
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 30 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-    <div style="text-align: center;">
-      <div style="text-align: center;">§ 30.</div>
+    <div style="text-align: justify;">
+      <div style="text-align: center;">
+        <div style="text-align: center;">§ 30.</div>
+      </div>
     </div>
-
+    <div style="text-align: justify;"></div>
     <div style="text-align: justify;">
       <ol>
         <li>Przy przetwarzaniu danych osobowych Beneficjent i Instytucja Zarządzająca przestrzegają zasad wskazanych w
@@ -2511,27 +2211,13 @@
           zasadach
           określonych w RODO.</li>
         <li>Dla innych kategorii osób oraz kategorii danych osobowych niż określone w ust. 2 strony umowy są odrębnymi
-          Administratorami danych osobowych, gdyż:
+          Administratorami danych osobowych, gdyż:</li>
 
-          <table
-            style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-            <tbody>
-              <tr>
-                <td style="vertical-align: text-top;">1) </td>
-                <td style="padding-left: 5px;">istnieją po ich stronie odrębne cele przetwarzania danych osobowych, o
-                  których samodzielnie decydują;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">2) </td>
-                <td style="padding-left: 5px;">decydują, każda w swoim zakresie, o sposobach przetwarzania tych danych.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </li>
-
+        <ol type="none">
+          <li>1) istnieją po ich stronie odrębne cele przetwarzania danych osobowych, o których samodzielnie decydują;
+          </li>
+          <li>2) decydują, każda w swoim zakresie, o sposobach przetwarzania tych danych.</li>
+        </ol>
 
         <li>W niezbędnym zakresie dane osobowe, o których mowa w ust. 3 będą przekazywane Instytucji Zarządzającej lub
           działającej na jej zlecenie Instytucji Pośredniczącej, w szczególności na podstawie art. 6 ust. 1 lit. c
@@ -2550,10 +2236,12 @@
     <div style="text-align: center;"><strong>Obowiązki informacyjne</strong></div>
     <div style="text-align: justify;">
 
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 31 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 31.</div>
+      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 31 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <div style="text-align: justify;">
+        <div style="text-align: center;">
+          <div style="text-align: center;">§ 31.</div>
+        </div>
       </div>
 
       <ol>
@@ -2564,60 +2252,29 @@
         </li>
         <li>Beneficjent jest zobowiązany w szczególności do:
 
+          <ol type="none">
+            <li>1) oznaczania znakiem Unii Europejskiej, barwami Rzeczpospolitej Polskiej i znakiem Funduszy
+              Europejskich
+              (w
+              przypadku programów regionalnych również herbem województwa lub jego oficjalnym logo promocyjnym):
 
-
-          <table
-            style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-            <tbody>
-              <tr>
-                <td style="vertical-align: text-top;">1) </td>
-                <td style="padding-left: 5px;">oznaczania znakiem Unii Europejskiej, barwami Rzeczpospolitej Polskiej i
-                  znakiem Funduszy
-                  Europejskich
-                  (w
-                  przypadku programów regionalnych również herbem województwa lub jego oficjalnym logo promocyjnym):
-
-                  <ol type="a">
-                    <li>wszystkich prowadzonych działań informacyjnych i promocyjnych dotyczących projektu,</li>
-                    <li>wszystkich dokumentów związanych z realizacją projektu, podawanych do wiadomości publicznej,
-                    </li>
-                    <li>wszystkich dokumentów i materiałów dla osób i podmiotów uczestniczących w projekcie;</li>
-                  </ol>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">2) </td>
-                <td style="padding-left: 5px;">umieszczania przynajmniej jednego plakatu o minimalnym formacie A3 lub
-                  odpowiednio tablicy
-                  informacyjnej
-                  i/lub
-                  pamiątkowej w miejscu realizacji projektu;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">3) </td>
-                <td style="padding-left: 5px;">umieszczania opisu projektu na stronie internetowej, w przypadku
-                  posiadania strony internetowej;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">4) </td>
-                <td style="padding-left: 5px;">przekazywania osobom i podmiotom uczestniczącym w projekcie informacji,
-                  że projekt uzyskał dofinansowanie przynajmniej w formie odpowiedniego oznakowania;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">5) </td>
-                <td style="padding-left: 5px;">dokumentowania działań informacyjnych i promocyjnych prowadzonych w
-                  ramach projektu.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              <ol type="a">
+                <li>wszystkich prowadzonych działań informacyjnych i promocyjnych dotyczących projektu,</li>
+                <li>wszystkich dokumentów związanych z realizacją projektu, podawanych do wiadomości publicznej,</li>
+                <li>wszystkich dokumentów i materiałów dla osób i podmiotów uczestniczących w projekcie;</li>
+              </ol>
+            </li>
+            <li>2) umieszczania przynajmniej jednego plakatu o minimalnym formacie A3 lub odpowiednio tablicy
+              informacyjnej
+              i/lub
+              pamiątkowej w miejscu realizacji projektu;</li>
+            <li>3) umieszczania opisu projektu na stronie internetowej, w przypadku posiadania strony internetowej;
+            </li>
+            <li>4) przekazywania osobom i podmiotom uczestniczącym w projekcie informacji, że projekt uzyskał
+              dofinansowanie
+              przynajmniej w formie odpowiedniego oznakowania;</li>
+            <li>5) dokumentowania działań informacyjnych i promocyjnych prowadzonych w ramach projektu<em>.</em></li>
+          </ol>
         </li>
 
 
@@ -2646,17 +2303,18 @@
 
 
     <div style="text-align: center;"><strong>Prawa autorskie</strong></div>
-
-
-
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 32 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-    <div style="text-align: center;">
-      <div style="text-align: center;">§ 32.</div>
-    </div>
-
     <div style="text-align: justify;">
 
+
+      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 32 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <div style="text-align: justify;">
+        <div style="text-align: center;">
+          <div style="text-align: center;">§ 32.</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: justify;"></div>
+    <div style="text-align: justify;">
       <ol>
         <li>Beneficjent zobowiązuje się do zawarcia z IZ odrębnej umowy przeniesienia autorskich praw majątkowych do
           utworów<sup>51</sup> wytworzonych w ramach
@@ -2683,12 +2341,12 @@
     <div style="text-align: center;"><strong>Zmiany w projekcie</strong></div>
     <div style="text-align: justify;">
       <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 33 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 33.</div>
+      <div style="text-align: justify;">
+        <div style="text-align: center;">
+          <div style="text-align: center;">§ 33.</div>
+        </div>
       </div>
-
-
+      <div style="text-align: justify;"></div>
       <div style="text-align: justify;">
 
 
@@ -2709,40 +2367,15 @@
             zastrzeżeniem
             ust. 3. Przesunięcia, o których mowa w zdaniu pierwszym, nie mogą:
 
-
-
-            <table
-              style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: text-top;">1) </td>
-                  <td style="padding-left: 5px;">zwiększać łącznej wysokości wydatków dotyczących cross-financingu w
-                    ramach projektu;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">2) </td>
-                  <td style="padding-left: 5px;">zwiększać łącznej wysokości wydatków odnoszących się do zakupu środków
-                    trwałych;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">3) </td>
-                  <td style="padding-left: 5px;">zwiększać łącznej wysokości wydatków ponoszonych poza terytorium kraju
-                    i UE;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">4) </td>
-                  <td style="padding-left: 5px;">wpływać na wysokość i przeznaczenie pomocy publicznej i/lub pomocy de
-                    minimis przyznanej Beneficjentowi w ramach projektu;<sup>53</sup>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <ol type="none">
+              <li>1) zwiększać łącznej wysokości wydatków dotyczących cross-financingu w ramach projektu;</li>
+              <li>2) zwiększać łącznej wysokości wydatków odnoszących się do zakupu środków trwałych;</li>
+              <li>3) zwiększać łącznej wysokości wydatków ponoszonych poza terytorium kraju i UE;</li>
+              <li>4) wpływać na wysokość i przeznaczenie pomocy publicznej i/lub pomocy de minimis przyznanej
+                Beneficjentowi
+                w
+                ramach projektu;<sup>53</sup></li>
+            </ol>
           </li>
 
           <li>W przypadku, gdy dokonane przez Beneficjenta przesunięcia, o których mowa w ust. 2 niniejszego
@@ -2774,158 +2407,92 @@
       <div style="text-align: center;"><strong>Rozwiązanie umowy</strong></div>
       <div style="text-align: justify;">
         <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 34 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        <div style="text-align: center;">
-          <div style="text-align: center;">§ 34.</div>
+        <div style="text-align: justify;">
+          <div style="text-align: center;">
+            <div style="text-align: center;">§ 34.</div>
+          </div>
         </div>
       </div>
-
+      <div style="text-align: justify;"></div>
       <div style="text-align: justify;">
-
-
-
-
 
         <ol>
           <li>IZ może rozwiązać niniejszą umowę w trybie natychmiastowym, w przypadku gdy:
-
-            <table
-              style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: text-top;">1) </td>
-                  <td style="padding-left: 5px;">Beneficjent wykorzysta w całości bądź w części przekazane środki
-                    niezgodnie z umową;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">2) </td>
-                  <td style="padding-left: 5px;">Beneficjent złoży podrobione, przerobione lub stwierdzające nieprawdę
-                    dokumenty w celu uzyskania wsparcia
-                    finansowego w ramach niniejszej umowy;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">3) </td>
-                  <td style="padding-left: 5px;">Beneficjent nie rozpoczął realizacji projektu w ciągu 3 miesięcy od
-                    ustalonej we wniosku początkowej daty okresu realizacji projektu, zaprzestał realizacji projektu lub
-                    realizuje go w sposób niezgodny z niniejszą umową;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">4) </td>
-                  <td style="padding-left: 5px;">Beneficjent nie przedłoży zabezpieczenia prawidłowej realizacji umowy
-                    zgodnie z § 18.<sup>54</sup>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">5) </td>
-                  <td style="padding-left: 5px;">Beneficjent przetwarza dane osobowe w sposób niezgodny z umową o której
-                    mowa w § 30 niniejszej umowy.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="vertical-align: text-top;">6) </td>
-                  <td style="padding-left: 5px;">Beneficjent nie osiągnie zamierzonych w projekcie wskaźników, zgodnie z
-                    § 3 umowy, z przyczyn przez siebie zawinionych;
-                  </td>
-                </tr>
-
-
-              </tbody>
-            </table>
+            <ol type="none">
+              <li>1) Beneficjent wykorzysta w całości bądź w części przekazane środki niezgodnie z umową;</li>
+              <li>2) Beneficjent złoży podrobione, przerobione lub stwierdzające nieprawdę dokumenty w celu uzyskania
+                wsparcia
+                finansowego w ramach niniejszej umowy;</li>
+              <li>3) Beneficjent nie rozpoczął realizacji projektu w ciągu 3 miesięcy od ustalonej we wniosku
+                początkowej
+                daty
+                okresu realizacji projektu, zaprzestał realizacji projektu lub realizuje go w sposób niezgodny z
+                niniejszą
+                umową;</li>
+              <li>4) Beneficjent nie przedłoży zabezpieczenia prawidłowej realizacji umowy zgodnie z §
+                18.<sup>54</sup>
+              </li>
+              <li>5) Beneficjent przetwarza dane osobowe w sposób niezgodny z umową o której mowa w § 30 niniejszej
+                umowy.
+              </li>
+              <li>6) Beneficjent nie osiągnie zamierzonych w projekcie wskaźników, zgodnie z § 3 umowy, z przyczyn
+                przez
+                siebie zawinionych; </li>
+            </ol>
           </li>
           <li>IZ może rozwiązać niniejszą umowę z zachowaniem jednomiesięcznego okresu wypowiedzenia, w przypadku gdy:
           </li>
 
-
-          <table
-            style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-            <tbody>
-              <tr>
-                <td style="vertical-align: text-top;">1) </td>
-                <td style="padding-left: 5px;">Beneficjent odmówi poddania się kontroli, o której mowa w § 21;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">2) </td>
-                <td style="padding-left: 5px;">Beneficjent w ustalonym przez IZ terminie nie doprowadzi do usunięcia
-                  stwierdzonych
-                  nieprawidłowości;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">3) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada zgodnie z umową wniosków o płatność w tym nie
-                  składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 12;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">4) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada uzupełnienia wniosków o płatność w terminach i
-                  zakresie wyznaczonym przez IZ;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">5) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji wniosku o dofinansowanie w
-                  terminach i zakresie wyznaczonym przez IZ;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">6) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji harmonogramu płatności, w tym nie
-                  składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 10 ust. 10;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">7) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przestrzega przepisów ustawy PZP w zakresie, w jakim
-                  ustawa ma zastosowanie do Beneficjenta;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">8) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przestrzega zasady konkurencyjności w zakresie, w jakim
-                  ta zasada stosuje się do Beneficjenta;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">9) </td>
-                <td style="padding-left: 5px;">Beneficjent w sposób uporczywy uchyla się od wykonywania obowiązków, o
-                  których mowa w § 9 ust. 1-2, 11 ust. 7, § 19 ust. 1 pkt 4) i 6), § 29 ust. 1 pkt 5);
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">10) </td>
-                <td style="padding-left: 5px;">Beneficjent odmówił podpisania aneksu w zakresie zmian wprowadzonych
-                  Wytycznymi, o których mowa w § 1 pkt 22).
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <ol type="none">
+            <li>1) Beneficjent odmówi poddania się kontroli, o której mowa w § 21;</li>
+            <li>2) Beneficjent w ustalonym przez IZ terminie nie doprowadzi do usunięcia stwierdzonych
+              nieprawidłowości;
+            </li>
+            <li>3) Beneficjent nie przedkłada zgodnie z umową wniosków o płatność w tym nie składa oryginału w LSI w
+              terminie
+              wyznaczonym przez IZ, o którym mowa w § 12;</li>
+            <li>4) Beneficjent nie przedkłada uzupełnienia wniosków o płatność w terminach i zakresie wyznaczonym
+              przez
+              IZ;
+            </li>
+            <li>5) Beneficjent nie przedkłada aktualizacji wniosku o dofinansowanie w terminach i zakresie wyznaczonym
+              przez
+              IZ;
+            </li>
+            <li>6) Beneficjent nie przedkłada aktualizacji harmonogramu płatności, w tym nie składa oryginału w LSI w
+              terminie
+              wyznaczonym przez IZ, o którym mowa w § 10 ust. 10;</li>
+            <li>7) Beneficjent nie przestrzega przepisów ustawy PZP w zakresie, w jakim ustawa ma zastosowanie do
+              Beneficjenta;
+            </li>
+            <li>8) Beneficjent nie przestrzega zasady konkurencyjności w zakresie, w jakim ta zasada stosuje się do
+              Beneficjenta;
+            </li>
+            <li>9) Beneficjent w sposób uporczywy uchyla się od wykonywania obowiązków, o których mowa w § 9 ust. 1-2,
+              11
+              ust.
+              7,
+              § 19 ust. 1 pkt 4) i 6), § 29 ust. 1 pkt 5);</li>
+            <li>10) Beneficjent odmówił podpisania aneksu w zakresie zmian wprowadzonych Wytycznymi, o których mowa w
+              § 1
+              pkt
+              22).
+            </li>
+          </ol>
         </ol>
       </div>
 
 
 
-
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 35 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-      <div style="text-align: center;">
-        <div style="text-align: center;">§ 35.</div>
+      <div style="text-align: justify;">
+        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 35 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <div style="text-align: justify;">
+          <div style="text-align: center;">
+            <div style="text-align: center;">§ 35.</div>
+          </div>
+        </div>
       </div>
-
-
+      <div style="text-align: justify;"></div>
       <div style="text-align: justify;">
         <ol>
 
@@ -2967,7 +2534,7 @@
           </div>
         </div>
       </div>
-
+      <div style="text-align: justify;"></div>
       <div style="text-align: justify;">
         <ol>
           <li>W przypadku rozwiązania umowy na podstawie § 34 ust. 1, Beneficjent jest zobowiązany do zwrotu całości
@@ -3103,29 +2670,12 @@
               projektu, o którym mowa w § 7 ust. 1 umowy.</li>
             <li>Integralną część niniejszej umowy stanowią następujące załączniki:</li>
 
-
-            <table
-              style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: text-top;">1) </td>
-                  <td style="padding-left: 5px;">załącznik nr 1: Wniosek o którym mowa w § 1 pkt 13),
-                  </td>
-                </tr>
-                <tr>
-                  <td style="vertical-align: text-top;">2) </td>
-                  <td style="padding-left: 5px;">załącznik nr 2: Harmonogram składania wniosków o płatność,
-                  </td>
-                </tr>
-                <tr>
-                  <td style="vertical-align: text-top;">3) </td>
-                  <td style="padding-left: 5px;">załącznik nr 3 : Szczegółowe obowiązki Beneficjenta wynikające z
-                    realizacji projektu w ramach<strong>Poddziałania
-                      {$dane_z_projects.nr_poddzialania}</strong><sup>56</sup>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <ol type="none">
+              <li>1) załącznik nr 1: Wniosek o którym mowa w § 1 pkt 13),</li>
+              <li>2) załącznik nr 2: Harmonogram składania wniosków o płatność,</li>
+              <li>3) załącznik nr 3 : Szczegółowe obowiązki Beneficjenta wynikające z realizacji projektu w ramach
+                <strong>Poddziałania {$dane_z_projects.nr_poddzialania}</strong><sup>56</sup></li>
+            </ol>
           </ol>
         </div>
 

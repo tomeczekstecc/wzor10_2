@@ -1,0 +1,61 @@
+<table style="border-collapse:collapse;border-spacing:0;">
+  <tbody>
+    <tr>
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>{foreach $stawki_jednostkowe as $rekord}
+          {$rekord@iteration})</p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p></p>
+      </td>
+
+
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Nazwa stawki jednostkowej</p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>{$rekord.nazwa_stawki}</p>
+      </td>
+
+
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Kwota stawki jednostkowej</p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>stawka_wydatki_kwal</p>
+      </td>
+
+
+      <td width="264"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p>Dokumenty potwierdzające wykonanie stawki jednostkowej<sup>16</sup></p>
+      </td>
+      <td width="289"
+        style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;">
+        <p></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<table style="text-align: justify; font-size: 12px; line-height: 1.5; font-family: Tahoma;margin-left: 30px">
+  <tbody>
+    <tr>
+      <td width="10mm"></td>
+      <td style="vertical-align: text-top; margin-top: 4px;" width="8mm"><strong>{foreach $wskazniki_prod as $rekord}
+          {$rekord@iteration})</strong></td>
+      <td width="160mm"><strong>{$rekord.nazwa_wsk_prod},wartość dolelowa:{foreach
+          $wskazniki_prod as $rekord} {$rekord.wsk_prod_docelowa}</strong></td>
+    </tr>
+  </tbody>
+</table>
