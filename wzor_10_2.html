@@ -512,7 +512,45 @@
     <li>Beneficjent oświadcza, iż projekt na dzień podpisania umowy spełnia wszystkie kryteria, na podstawie których
       został
       wybrany do dofinansowania.</li>
-    <li><sup>13</sup> {$pole_14}
+    <li><sup>13</sup>
+
+
+      {if $dane_z_aktualnego_wnd.vat_csi == '1'}
+
+      Beneficjent oświadcza, że w chwili zawarcia niniejszej umowy, wydatki w projekcie zawierają podatek od towarów i
+      usług
+      VAT, ponieważ Beneficjent, a także partner/rzy (jeśli dotyczy) nie ma/nie mają prawnej możliwości odzyskania
+      podatku VAT
+      zgodnie z przepisami ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2018 r., poz. 2174 z
+      późn.
+      zm.) oraz rozporządzeniami do tej ustawy. Jednocześnie Beneficjent zobowiązuje się do zwrotu zrefundowanej ze
+      środków
+      unijnych w ramach projektu części poniesionego podatku VAT, jeżeli zaistnieją przesłanki umożliwiające odzyskanie
+      tego
+      podatku przez Beneficjenta lub któregokolwiek z partnerów projektu.
+
+      {else if $dane_z_aktualnego_wnd.vat_csi == '2'}
+
+      Beneficjent oświadcza, że część wydatków w projekcie zawiera podatek od towarów i usług VAT, ponieważ Beneficjent,
+      a
+      także partner/rzy (jeśli dotyczy) nie ma/nie mają prawnej możliwości odzyskania podatku VAT od wszystkich kosztów
+      wskazanych w budżecie projektu zgodnie z przepisami ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług
+      (Dz. U.
+      z 2018 r., poz. 2174 z późn. zm.) oraz rozporządzeniami do tej ustawy. Jednocześnie Beneficjent zobowiązuje się do
+      zwrotu zrefundowanej ze środków unijnych w ramach projektu części poniesionego podatku VAT, jeżeli zaistnieją
+      przesłanki
+      umożliwiające odzyskanie tego podatku przez Beneficjenta lub któregokolwiek z partnerów projektu.
+
+      {else}
+
+      Beneficjent oświadcza, że wydatki w projekcie nie zawierają podatku od towarów i usług VAT, ponieważ Beneficjent,
+      a
+      także partner/rzy (jeśli dotyczy) ma/mają prawną możliwość odzyskania podatku VAT zgodnie z przepisami ustawy z
+      dnia 11
+      marca 2004 r. o podatku od towarów i usług (Dz. U. z 2018 r., poz. 2174 z późn. zm.) oraz rozporządzeniami do tej
+      ustawy.
+
+      {/if}
     </li>
 
 
@@ -546,23 +584,24 @@
 
 
 
-    <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-      <tbody>
-        <tr>
-          <td style="vertical-align: text-top;">1) </td>
-          <td style="padding-left: 5px;">Formularz przekazywania informacji,
-          </td>
-        </tr>
+      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: text-top;">1) </td>
+            <td style="padding-left: 5px;">Formularz przekazywania informacji,
+            </td>
+          </tr>
 
-        <tr>
-          <td style="vertical-align: text-top;">2) </td>
-          <td style="padding-left: 5px;">Wymagania dotyczące wyodrębnionej ewidencji księgowej.
-          </td>
-        </tr>
+          <tr>
+            <td style="vertical-align: text-top;">2) </td>
+            <td style="padding-left: 5px;">Wymagania dotyczące wyodrębnionej ewidencji księgowej.
+            </td>
+          </tr>
 
 
-      </tbody>
-    </table></li>
+        </tbody>
+      </table>
+    </li>
   </ol>
 
 
@@ -798,14 +837,21 @@
     </div>
 
 
-
+    {if $partnerzy ==null }
+    <ol start="6" style="text-decoration: line-through;">
+      <li>Beneficjent oświadcza, iż porozumienie/umowa o partnerstwie spełnia minimalne wymogi formalne, o których
+        mowa
+        w art. 33 ust. 5 ustawy wdrożeniowej oraz partnerstwo zostało nawiązane zgodnie z art. 33 ustawy
+        wdrożeniowej<sup>19</sup>.</li>
+    </ol>
+    {else}
     <ol start="6">
       <li>Beneficjent oświadcza, iż porozumienie/umowa o partnerstwie spełnia minimalne wymogi formalne, o których
         mowa
         w art. 33 ust. 5 ustawy wdrożeniowej oraz partnerstwo zostało nawiązane zgodnie z art. 33 ustawy
         wdrożeniowej<sup>19</sup>.</li>
     </ol>
-
+    {/if}
 
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PARAGRAF 8 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div style="text-align: justify;">
@@ -843,7 +889,7 @@
       Projektem, w szczególności na tymczasowe finansowanie swojej podstawowej, pozaprojektowej działalności.</li>
   </ol>
 
-  <div style="text-align: justify;"></div>
+
   <div style="text-align: justify;">
 
 
@@ -857,7 +903,6 @@
     <ol>
       <li>Dofinansowanie, o którym mowa w § 2, na realizację projektu jest wypłacane w formie transz:</li>
     </ol>
-
 
     <table style="margin-left: 45px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
       <tbody>
@@ -1029,44 +1074,52 @@
       ust.
       12, do dyspozycji Beneficjenta w następnym roku budżetowym, z zastrzeżeniem § 12 ust. 2 i 8 oraz § 36 ust. 3.
     </li>
-    <li>Beneficjent każdorazowo zobowiązany jest do niezwłocznego złożenia do IZ drogą elektroniczną informacji
-      dotyczącej zwrotu środków, zawierającej:</li>
+    <li style="padding:-50px">Beneficjent każdorazowo zobowiązany jest do niezwłocznego złożenia do IZ drogą
+      elektroniczną
+      informacji
+      dotyczącej zwrotu środków, zawierającej:
 
-    <table style="margin-left: 95px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-      <tbody>
-        <tr>
-          <td style="vertical-align: text-top;">1) </td>
-          <td style="padding-left: 5px;">numer projektu;
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: text-top;">2) </td>
-          <td style="padding-left: 5px;">wysokość środków w poszczególnych paragrafach klasyfikacji
-            budżetowej;<sup>29</sup>
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: text-top;">3) </td>
-          <td style="padding-left: 5px;">podział na kwotę należności głównej i kwotę odsetek ze wskazaniem na źródła
-            finansowania (płatność ze
-            środków
-            europejskich i dotacja celowa);
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: text-top;">4) </td>
-          <td style="padding-left: 5px;">wskazanie daty transzy, z jakiej zostały przekazane środki, których dotyczy
-            zwrot z uwzględnieniem źródeł
-            finansowania;
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: text-top;">5) </td>
-          <td style="padding-left: 5px;">tytuł zwrotu (np. należność główna, odsetki, decyzja administracyjna, itp.).
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+
+      <table style="margin-left: 22px;; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: text-top;">1) </td>
+            <td style="padding-left: 5px;">numer projektu;
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: text-top;">2) </td>
+            <td style="padding-left: 5px;">wysokość środków w poszczególnych paragrafach klasyfikacji
+              budżetowej;<sup>29</sup>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: text-top;">3) </td>
+            <td style="padding-left: 5px;">podział na kwotę należności głównej i kwotę odsetek ze wskazaniem na źródła
+              finansowania (płatność ze
+              środków
+              europejskich i dotacja celowa);
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: text-top;">4) </td>
+            <td style="padding-left: 5px;">wskazanie daty transzy, z jakiej zostały przekazane środki, których dotyczy
+              zwrot z uwzględnieniem źródeł
+              finansowania;
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: text-top;">5) </td>
+            <td style="padding-left: 5px;">tytuł zwrotu (np. należność główna, odsetki, decyzja administracyjna,
+              itp.).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </li>
+
   </ol>
 
 
@@ -1079,8 +1132,7 @@
 
   <ol>
     <li>Strony ustalają następujące warunki przekazania transzy dofinansowania, z uwzględnieniem ust. 2-6:
-      <table
-        style="margin-top: -30px; margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+      <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
         <tbody>
           <tr>
             <td style="vertical-align: text-top;">1) </td>
@@ -1787,7 +1839,8 @@
                 harmonogramu. Przeprowadzenie przez IZ bezprzedmiotowej wizyty monitoringowej, zaplanowanej w oparciu o
                 nieaktualny
                 harmonogram może spowodować obciążenie Beneficjenta kosztami delegacji służbowej pracowników IZ;</div>
-              sed
+
+
             </td>
           </tr>
 
@@ -1826,7 +1879,6 @@
         i informacji na
         temat
         realizacji projektu niezbędnych do przeprowadzenia kontroli/audytu.
-        sed
       </td>
     </tr>
     </tbody>
@@ -2330,7 +2382,7 @@
       <li>Beneficjent jest zobowiązany do składania dokumentów, informacji i wyjaśnień związanych z realizacją
         projektu,
         których IZ RPO WSL wymaga, w szczególności:
-
+        `
 
         <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
           <tbody>
@@ -2406,14 +2458,11 @@
                 danych w LSI po ustaniu awarii lub uruchomieniu systemu.
               </td>
             </tr>
-
-
           </tbody>
         </table>
-
-
-
       </li>
+
+
       <li>Dokumenty dostarczane z wykorzystaniem komunikacji elektronicznej, są opatrzone bezpiecznym podpisem
         elektronicznym weryfikowanym przy pomocy kwalifikowanego certyfikatu lub certyfikatu CC SEKAP lub profilu
         zaufanego ePUAP.</li>
@@ -2433,7 +2482,6 @@
         komunikacji elektronicznej z wykorzystaniem platform elektronicznych SEKAP/ePUAP Beneficjent na pisemne
         wezwanie
         IZ RPO WSL jest zobowiązany do dostarczenia dokumentów w innej formie, w szczególności:
-
 
 
         <table style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
@@ -2781,10 +2829,6 @@
 
       <div style="text-align: justify;">
 
-
-
-
-
         <ol>
           <li>IZ może rozwiązać niniejszą umowę w trybie natychmiastowym, w przypadku gdy:
 
@@ -2840,79 +2884,83 @@
             </table>
           </li>
           <li>IZ może rozwiązać niniejszą umowę z zachowaniem jednomiesięcznego okresu wypowiedzenia, w przypadku gdy:
+
+
+
+            <table
+              style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: text-top;">1) </td>
+                  <td style="padding-left: 5px;">Beneficjent odmówi poddania się kontroli, o której mowa w § 21;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="vertical-align: text-top;">2) </td>
+                  <td style="padding-left: 5px;">Beneficjent w ustalonym przez IZ terminie nie doprowadzi do usunięcia
+                    stwierdzonych
+                    nieprawidłowości;
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: text-top;">3) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przedkłada zgodnie z umową wniosków o płatność w tym
+                    nie
+                    składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 12;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="vertical-align: text-top;">4) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przedkłada uzupełnienia wniosków o płatność w terminach
+                    i
+                    zakresie wyznaczonym przez IZ;
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: text-top;">5) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji wniosku o dofinansowanie w
+                    terminach i zakresie wyznaczonym przez IZ;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="vertical-align: text-top;">6) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji harmonogramu płatności, w tym
+                    nie
+                    składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 10 ust. 10;
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: text-top;">7) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przestrzega przepisów ustawy PZP w zakresie, w jakim
+                    ustawa ma zastosowanie do Beneficjenta;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="vertical-align: text-top;">8) </td>
+                  <td style="padding-left: 5px;">Beneficjent nie przestrzega zasady konkurencyjności w zakresie, w jakim
+                    ta zasada stosuje się do Beneficjenta;
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: text-top;">9) </td>
+                  <td style="padding-left: 5px;">Beneficjent w sposób uporczywy uchyla się od wykonywania obowiązków, o
+                    których mowa w § 9 ust. 1-2, 11 ust. 7, § 19 ust. 1 pkt 4) i 6), § 29 ust. 1 pkt 5);
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="vertical-align: text-top;">10) </td>
+                  <td style="padding-left: 5px;">Beneficjent odmówił podpisania aneksu w zakresie zmian wprowadzonych
+                    Wytycznymi, o których mowa w § 1 pkt 22).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </li>
-
-
-          <table
-            style="margin-left: 22px; text-align: justify; font-size: 13px; line-height: 1.7; font-family: Tahoma;">
-            <tbody>
-              <tr>
-                <td style="vertical-align: text-top;">1) </td>
-                <td style="padding-left: 5px;">Beneficjent odmówi poddania się kontroli, o której mowa w § 21;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">2) </td>
-                <td style="padding-left: 5px;">Beneficjent w ustalonym przez IZ terminie nie doprowadzi do usunięcia
-                  stwierdzonych
-                  nieprawidłowości;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">3) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada zgodnie z umową wniosków o płatność w tym nie
-                  składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 12;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">4) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada uzupełnienia wniosków o płatność w terminach i
-                  zakresie wyznaczonym przez IZ;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">5) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji wniosku o dofinansowanie w
-                  terminach i zakresie wyznaczonym przez IZ;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">6) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przedkłada aktualizacji harmonogramu płatności, w tym nie
-                  składa oryginału w LSI w terminie wyznaczonym przez IZ, o którym mowa w § 10 ust. 10;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">7) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przestrzega przepisów ustawy PZP w zakresie, w jakim
-                  ustawa ma zastosowanie do Beneficjenta;
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">8) </td>
-                <td style="padding-left: 5px;">Beneficjent nie przestrzega zasady konkurencyjności w zakresie, w jakim
-                  ta zasada stosuje się do Beneficjenta;
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: text-top;">9) </td>
-                <td style="padding-left: 5px;">Beneficjent w sposób uporczywy uchyla się od wykonywania obowiązków, o
-                  których mowa w § 9 ust. 1-2, 11 ust. 7, § 19 ust. 1 pkt 4) i 6), § 29 ust. 1 pkt 5);
-                </td>
-              </tr>
-
-              <tr>
-                <td style="vertical-align: text-top;">10) </td>
-                <td style="padding-left: 5px;">Beneficjent odmówił podpisania aneksu w zakresie zmian wprowadzonych
-                  Wytycznymi, o których mowa w § 1 pkt 22).
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </ol>
       </div>
 
@@ -3120,7 +3168,7 @@
                 <tr>
                   <td style="vertical-align: text-top;">3) </td>
                   <td style="padding-left: 5px;">załącznik nr 3 : Szczegółowe obowiązki Beneficjenta wynikające z
-                    realizacji projektu w ramach<strong>Poddziałania
+                    realizacji projektu w ramach<strong> Poddziałania
                       {$dane_z_projects.nr_poddzialania}</strong><sup>56</sup>
                   </td>
                 </tr>
